@@ -1,0 +1,15 @@
+C:\Proiecte Programare\HighschoolClass\HighschoolClass\bin\Debug\net6.0\HighschoolClass.exe
+C:\Proiecte Programare\HighschoolClass\HighschoolClass\bin\Debug\net6.0\HighschoolClass.deps.json
+C:\Proiecte Programare\HighschoolClass\HighschoolClass\bin\Debug\net6.0\HighschoolClass.runtimeconfig.json
+C:\Proiecte Programare\HighschoolClass\HighschoolClass\bin\Debug\net6.0\HighschoolClass.dll
+C:\Proiecte Programare\HighschoolClass\HighschoolClass\bin\Debug\net6.0\ref\HighschoolClass.dll
+C:\Proiecte Programare\HighschoolClass\HighschoolClass\bin\Debug\net6.0\HighschoolClass.pdb
+C:\Proiecte Programare\HighschoolClass\HighschoolClass\obj\Debug\net6.0\HighschoolClass.csproj.AssemblyReference.cache
+C:\Proiecte Programare\HighschoolClass\HighschoolClass\obj\Debug\net6.0\HighschoolClass.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proiecte Programare\HighschoolClass\HighschoolClass\obj\Debug\net6.0\HighschoolClass.AssemblyInfoInputs.cache
+C:\Proiecte Programare\HighschoolClass\HighschoolClass\obj\Debug\net6.0\HighschoolClass.AssemblyInfo.cs
+C:\Proiecte Programare\HighschoolClass\HighschoolClass\obj\Debug\net6.0\HighschoolClass.csproj.CoreCompileInputs.cache
+C:\Proiecte Programare\HighschoolClass\HighschoolClass\obj\Debug\net6.0\HighschoolClass.dll
+C:\Proiecte Programare\HighschoolClass\HighschoolClass\obj\Debug\net6.0\ref\HighschoolClass.dll
+C:\Proiecte Programare\HighschoolClass\HighschoolClass\obj\Debug\net6.0\HighschoolClass.pdb
+C:\Proiecte Programare\HighschoolClass\HighschoolClass\obj\Debug\net6.0\HighschoolClass.genruntimeconfig.cache
