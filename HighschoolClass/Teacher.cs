@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HighschoolClass
 {
-    internal class Teacher : Person
+    internal class Teacher : Person, IComparable
     {
         private int seniority;
         private List<string> possibleSchoolSubjectsToTeach;
@@ -49,7 +49,16 @@ namespace HighschoolClass
             }
             return teacherString;
         }
-
-
+        //Implement CompareTo
+        public int CompareTo(object? obj)
+        {
+            if (this.seniority > ((Teacher)obj).seniority)
+                return 1;
+            if (this.seniority < ((Teacher)obj).seniority)
+                return -1;
+            if (this.seniority == ((Teacher)obj).seniority)
+                return 0;
+            return 0;
+        }
     }
 }
