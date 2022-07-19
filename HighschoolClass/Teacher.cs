@@ -29,14 +29,27 @@ namespace HighschoolClass
         }
 
         //Constructor explicit
-        public Teacher(int seniority, List<string> possibleSchoolSubjectsToTeach, string name, Gen gen)
+        public Teacher(string name, Gen gen, int seniority, List<string> possibleSchoolSubjectsToTeach)
         {
+            this.name = name;
+            this.gen = gen;
             this.seniority = seniority;
             this.possibleSchoolSubjectsToTeach = new List<string>();
-            this.name = name; 
-            this.gen = gen;
         }
 
-        
+        //ToString
+
+        public override string ToString()
+        {
+            string teacherString = "";
+            teacherString = teacherString + "Name: " + name + "\n" + "Gen: " + gen + "\n" + "Seniority: " + seniority + "\n" + "School subject: ";
+            foreach(string element in possibleSchoolSubjectsToTeach)
+            {
+                teacherString = teacherString + "\n" + element.ToString();
+            }
+            return teacherString;
+        }
+
+
     }
 }
