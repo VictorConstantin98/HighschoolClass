@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace HighschoolClass
 {
+    enum Gen { Masculin, Feminin, Neutru};
     internal class Gender
     {
-        private enum gender{ Masculin, Feminin, Neutru };
+        private Gen gen;
     }
 }

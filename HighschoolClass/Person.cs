@@ -8,9 +8,30 @@ namespace HighschoolClass
 {
     internal abstract class Person : IPerson
     {
-        private enum gender { Masculin, Feminin, Neutru };
         private string name;
+        private Gen gen;
 
+
+        //Getteri & setteri
+        public string getName()
+        {
+            return this.name;
+        }
+
+        public void setName(string name)
+        {
+            this.name = name;
+        }
+
+        public Gen getGen()
+        {
+            return this.gen;
+        }
+
+        public void setGen(Gen gen)
+        {
+            this.gen = gen; 
+        }
         //Implementam metoda din interfata
         public int CalculateAge()
         {

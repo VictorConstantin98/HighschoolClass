@@ -10,5 +10,20 @@ namespace HighschoolClass
     {
         private int seniority;
         private List<string> possibleSchoolSubjectsToTeach;
+
+        //Constructor implicit
+        public Teacher()
+        {
+
+        }
+
+        //Constructor explicit
+        public Teacher(int seniority, List<string> possibleSchoolSubjectsToTeach, string name, Gen gen)
+        {
+            this.seniority = seniority;
+            this.possibleSchoolSubjectsToTeach = new List<string>();
+             
+
+        }
     }
 }
