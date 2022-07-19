@@ -11,6 +11,17 @@ namespace HighschoolClass
         private int seniority;
         private List<string> possibleSchoolSubjectsToTeach;
 
+        //Accesori
+        public string getName()
+        {
+            return this.name;
+        }
+
+        private Gen getGen()
+        {
+            return this.gen;
+        }
+
         //Constructor implicit
         public Teacher()
         {
@@ -22,8 +33,10 @@ namespace HighschoolClass
         {
             this.seniority = seniority;
             this.possibleSchoolSubjectsToTeach = new List<string>();
-             
-
+            this.name = name; 
+            this.gen = gen;
         }
+
+        
     }
 }

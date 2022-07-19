@@ -8,11 +8,11 @@ namespace HighschoolClass
 {
     internal abstract class Person : IPerson
     {
-        private string name;
-        private Gen gen;
+        protected string name;
+        protected Gen gen;
 
 
-        //Getteri & setteri
+        //Accesori
         public string getName()
         {
             return this.name;
