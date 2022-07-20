@@ -29,12 +29,21 @@ namespace HighschoolClass
         }
 
         //Constructor explicit
-        public Teacher(string name, Gen gen, int seniority, List<string> possibleSchoolSubjectsToTeach)
+        public Teacher(string name, Gen gen, int seniority)
         {
             this.name = name;
             this.gen = gen;
             this.seniority = seniority;
             this.possibleSchoolSubjectsToTeach = new List<string>();
+        }
+
+        /*
+         * Metoda de adaugat subiecte de predat in lista
+         */
+
+        public void addSubject(string subjectToAdd)
+        {
+            possibleSchoolSubjectsToTeach.Add(subjectToAdd);
         }
 
         //ToString
@@ -45,7 +54,7 @@ namespace HighschoolClass
             teacherString = teacherString + "Name: " + name + "\n" + "Gen: " + gen + "\n" + "Seniority: " + seniority + "\n" + "School subject: ";
             foreach(string element in possibleSchoolSubjectsToTeach)
             {
-                teacherString = teacherString + "\n" + element.ToString();
+                teacherString = teacherString + element.ToString() + " ";
             }
             return teacherString;
         }
