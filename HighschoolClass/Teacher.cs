@@ -46,6 +46,15 @@ namespace HighschoolClass
             possibleSchoolSubjectsToTeach.Add(subjectToAdd);
         }
 
+        /*
+         * Metoda de sters subiecte din lista
+         */
+
+        public void deleteSubject(string subjectToDelete)
+        {
+            possibleSchoolSubjectsToTeach.Remove(subjectToDelete);
+        }
+
         //ToString
 
         public override string ToString()

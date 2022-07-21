@@ -31,6 +31,15 @@ namespace HighschoolClass
             teacher1.addSubject("Biology");
             teacher1.addSubject("Literature");
             Console.WriteLine(teacher1.ToString());
+            Console.WriteLine("\n");
+
+            Console.WriteLine("Stergem Math din lista");
+            Console.WriteLine("----------------------");
+            Console.WriteLine("\n");
+
+            teacher1.deleteSubject("Math");
+            Console.WriteLine(teacher1.ToString());
+            Console.WriteLine("\n");
             
         }
     }
