@@ -40,7 +40,16 @@ namespace HighschoolClass
             teacher1.deleteSubject("Math");
             Console.WriteLine(teacher1.ToString());
             Console.WriteLine("\n");
-            
+
+            Console.WriteLine("Verificam vechimea celui de-al doilea profesor");
+            Console.WriteLine("----------------------------------------------");
+            Console.WriteLine("\n");
+            teacher2.addSubject("Geography");
+            teacher2.addSubject("Music");
+            teacher2.addSubject("Art");
+            teacher2.settingSeniority(0);
+            Console.WriteLine(teacher2.ToString());
+
         }
     }
 }

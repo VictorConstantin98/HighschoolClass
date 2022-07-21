@@ -55,6 +55,25 @@ namespace HighschoolClass
             possibleSchoolSubjectsToTeach.Remove(subjectToDelete);
         }
 
+        /*
+         * Metoda de setare a senioritatii
+         */
+
+        public void settingSeniority(int seniority)
+        {
+            if(this.seniority >= 1)
+            {
+                this.seniority = seniority;
+            }
+            else
+            {
+                if(this.seniority <= 0)
+                {
+                    throw new Exception("Vechimea profesorului nu corespunde.");
+                }
+            }
+        }
+
         //ToString
 
         public override string ToString()
