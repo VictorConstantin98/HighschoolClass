@@ -47,8 +47,21 @@ namespace HighschoolClass
             teacher2.addSubject("Geography");
             teacher2.addSubject("Music");
             teacher2.addSubject("Art");
-            teacher2.settingSeniority(0);
+            teacher2.settingSeniority(-1);
             Console.WriteLine(teacher2.ToString());
+
+            try
+            {
+                teacher1.settingSeniority(-1);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            
+
+
+
 
         }
     }

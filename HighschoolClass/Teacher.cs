@@ -61,13 +61,13 @@ namespace HighschoolClass
 
         public void settingSeniority(int seniority)
         {
-            if(this.seniority >= 1)
+            if(seniority >= 1)
             {
                 this.seniority = seniority;
             }
             else
             {
-                if(this.seniority <= 0)
+                if(seniority <= 0)
                 {
                     throw new Exception("Vechimea profesorului nu corespunde.");
                 }
