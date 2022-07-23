@@ -10,6 +10,7 @@ namespace HighschoolClass
     {
         private int seniority;
         private List<string> possibleSchoolSubjectsToTeach;
+        private Teacher teacher;
 
         //Accesori
         public string getName()
@@ -36,6 +37,8 @@ namespace HighschoolClass
             this.seniority = seniority;
             this.possibleSchoolSubjectsToTeach = new List<string>();
         }
+
+       
 
         /*
          * Metoda de adaugat subiecte de predat in lista
@@ -69,7 +72,7 @@ namespace HighschoolClass
             {
                 if(seniority <= 0)
                 {
-                    throw new Exception("Vechimea profesorului nu corespunde.");
+                    //throw new Exception("Vechimea profesorului nu corespunde.");
                 }
             }
         }

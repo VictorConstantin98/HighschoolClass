@@ -9,6 +9,12 @@ namespace HighschoolClass
     internal class SchoolSubject
     {
         private readonly string nume;
-        private Teacher teacher;
+        private  Teacher teacher;
+
+        public SchoolSubject() {
+            this.teacher = null;
+        }
+        
+
     }
 }

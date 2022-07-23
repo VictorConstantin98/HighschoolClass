@@ -8,13 +8,14 @@ namespace HighschoolClass
 {
     internal class Grade : IGrade
     {
-        SchoolSubject schoolSubject;
-        List<int> gradesLst;
+        private SchoolSubject schoolSubject;
+        private List<int> gradesLst;
 
         //Implementam metoda din interfata
         public double CalculateGrade()
         {
             throw new NotImplementedException();
+            
         }
     }
 }
