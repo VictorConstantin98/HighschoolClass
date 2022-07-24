@@ -59,12 +59,39 @@ namespace HighschoolClass
                 Console.WriteLine(ex.Message);
             }
 
+            SchoolSubject schoolSubject = new SchoolSubject();
+            schoolSubject.setTeacher(teacher2);
+            schoolSubject.validateTeacherSubject("Music");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             // Pt Ex 5
             // Aceasta ar trebui sa arunce o eroare in cazul in care Teacherul din constructor este NULL
-            /*
-            SchoolSubject ss = new SchoolSubject();
-            ss.setTeacher(ss.getTeacher());
-            */
+
+            /*SchoolSubject ss = new SchoolSubject();
+            ss.setTeacher(ss.getTeacher());*/
+
 
 
         }
