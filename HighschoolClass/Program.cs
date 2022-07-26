@@ -74,6 +74,7 @@ namespace HighschoolClass
             teacher3.CalculateAge(dataNasterii);
             teacher3.setDataNasterii(dataNasterii);
             Console.WriteLine(teacher3.ToString());
+            Console.WriteLine("\n");
 
             Console.WriteLine("Verificam daca profesorul 3 stie sa predea materia sport");
             Console.WriteLine("--------------------------------------------------------");
@@ -81,6 +82,14 @@ namespace HighschoolClass
             verificareMaterie = teacher3.validateSchoolSubject("Sport");
             Console.WriteLine(verificareMaterie);
             Console.WriteLine("\n");
+
+            Console.WriteLine("Testam metoda de verificare gen pentru profesorul 3");
+            Console.WriteLine("---------------------------------------------------");
+            Console.WriteLine("\n");
+            teacher3.setGen(Person.stringToGen("M"));
+            Console.WriteLine(teacher3.ToString());
+            Console.WriteLine("\n");
+
 
 
 

@@ -28,3 +28,18 @@ C:\.NET Projects\HighschoolClass\HighschoolClass\obj\Debug\net6.0\refint\Highsch
 C:\.NET Projects\HighschoolClass\HighschoolClass\obj\Debug\net6.0\HighschoolClass.pdb
 C:\.NET Projects\HighschoolClass\HighschoolClass\obj\Debug\net6.0\HighschoolClass.genruntimeconfig.cache
 C:\.NET Projects\HighschoolClass\HighschoolClass\obj\Debug\net6.0\ref\HighschoolClass.dll
+D:\Work\Proiecte\HighschoolClass\HighschoolClass\bin\Debug\net6.0\HighschoolClass.exe
+D:\Work\Proiecte\HighschoolClass\HighschoolClass\bin\Debug\net6.0\HighschoolClass.deps.json
+D:\Work\Proiecte\HighschoolClass\HighschoolClass\bin\Debug\net6.0\HighschoolClass.runtimeconfig.json
+D:\Work\Proiecte\HighschoolClass\HighschoolClass\bin\Debug\net6.0\HighschoolClass.dll
+D:\Work\Proiecte\HighschoolClass\HighschoolClass\bin\Debug\net6.0\HighschoolClass.pdb
+D:\Work\Proiecte\HighschoolClass\HighschoolClass\obj\Debug\net6.0\HighschoolClass.csproj.AssemblyReference.cache
+D:\Work\Proiecte\HighschoolClass\HighschoolClass\obj\Debug\net6.0\HighschoolClass.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\Proiecte\HighschoolClass\HighschoolClass\obj\Debug\net6.0\HighschoolClass.AssemblyInfoInputs.cache
+D:\Work\Proiecte\HighschoolClass\HighschoolClass\obj\Debug\net6.0\HighschoolClass.AssemblyInfo.cs
+D:\Work\Proiecte\HighschoolClass\HighschoolClass\obj\Debug\net6.0\HighschoolClass.csproj.CoreCompileInputs.cache
+D:\Work\Proiecte\HighschoolClass\HighschoolClass\obj\Debug\net6.0\HighschoolClass.dll
+D:\Work\Proiecte\HighschoolClass\HighschoolClass\obj\Debug\net6.0\refint\HighschoolClass.dll
+D:\Work\Proiecte\HighschoolClass\HighschoolClass\obj\Debug\net6.0\HighschoolClass.pdb
+D:\Work\Proiecte\HighschoolClass\HighschoolClass\obj\Debug\net6.0\HighschoolClass.genruntimeconfig.cache
+D:\Work\Proiecte\HighschoolClass\HighschoolClass\obj\Debug\net6.0\ref\HighschoolClass.dll

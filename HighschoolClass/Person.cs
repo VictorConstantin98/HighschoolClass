@@ -52,5 +52,21 @@ namespace HighschoolClass
             var age = DateTime.Now.Year - dataNasterii.Year;
             return age;
         }
+
+        /*
+         * Metoda statica stringToEnum
+         */
+
+        public static Gen stringToGen(string genString)
+        {
+            if (genString == "M")
+                return Gen.Masculin;
+            if (genString == "F")
+                return Gen.Feminin;
+            if (genString == "N")
+                return Gen.Neutru;
+            else
+                throw new Exception("Litera genului nu corespunde. Incercati cu alta litera");
+        }
     }
 }
