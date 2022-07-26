@@ -99,6 +99,21 @@ namespace HighschoolClass
             }
         }
 
+        /*
+         * Metoda care verifica daca profesorul stie sa predea o anumita materie data
+         */
+        public bool validateSchoolSubject(string schoolSubject)
+        {
+            foreach(string element in possibleSchoolSubjectsToTeach)
+            {
+                if(element == schoolSubject)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         //ToString
 
         public override string ToString()
