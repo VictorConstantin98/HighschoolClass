@@ -36,18 +36,23 @@ namespace HighschoolClass
          * Metoda de validare a Teacher-ului
          */
          
-        public bool validateTeacherSubject(string numeMaterie)
+        /*public bool validateTeacherSubject(string numeMaterie)
         {
-            if(numeMaterie == this.nume)
             {
-                return true;
-            }
-            else
-            {
+                foreach(string element in teacher.getLista())
+                {
+                    if(nume == numeMaterie)
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        throw new Exception("Numele materiei nu corespunde. Incercati cu alt nume.");
+                    }
+                }
                 return false;
-                throw new Exception("Numele materiei este invalid. Verificati cu alt nume.");
             }
-        }
+        }*/
 
         //ToString
         public override string ToString()

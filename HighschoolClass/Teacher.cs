@@ -10,7 +10,6 @@ namespace HighschoolClass
     {
         private int seniority;
         private List<string> possibleSchoolSubjectsToTeach;
-        private Teacher teacher;
 
         //Accesori
         public string getName()
@@ -21,6 +20,16 @@ namespace HighschoolClass
         private Gen getGen()
         {
             return this.gen;
+        }
+
+        public List<string> getLista()
+        {
+            return this.possibleSchoolSubjectsToTeach;
+        }
+
+        public void setLista(List<string> possibleSchoolSubjectsToTeach)
+        {
+            this.possibleSchoolSubjectsToTeach = possibleSchoolSubjectsToTeach;
         }
 
         //Constructor implicit
@@ -36,6 +45,7 @@ namespace HighschoolClass
             this.gen = gen;
             this.seniority = seniority;
             this.possibleSchoolSubjectsToTeach = new List<string>();
+            this.dataNasterii = dataNasterii;
         }
 
        
@@ -77,12 +87,24 @@ namespace HighschoolClass
             }
         }
 
+        /*
+         * Metoda de parcurgere a listei
+         */
+
+        public void verificareElementeLista(string elementDeVerificat)
+        {
+            foreach(string element in possibleSchoolSubjectsToTeach)
+            {
+                Console.WriteLine(element);
+            }
+        }
+
         //ToString
 
         public override string ToString()
         {
             string teacherString = "";
-            teacherString = teacherString + "Name: " + name + "\n" + "Gen: " + gen + "\n" + "Seniority: " + seniority + "\n" + "School subject: ";
+            teacherString = teacherString + "Name: " + name + "\n" + "Gen: " + gen + "\n" + "Seniority: " + seniority + "\n" + "Data nasterii: " + dataNasterii.ToShortDateString() + "\n" + "School subject: ";
             foreach(string element in possibleSchoolSubjectsToTeach)
             {
                 teacherString = teacherString + element.ToString() + " ";
@@ -100,5 +122,7 @@ namespace HighschoolClass
                 return 0;
             return 0;
         }
+
+        
     }
 }

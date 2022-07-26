@@ -10,6 +10,7 @@ namespace HighschoolClass
     {
         protected string name;
         protected Gen gen;
+        protected DateTime dataNasterii;
 
 
         //Accesori
@@ -32,10 +33,24 @@ namespace HighschoolClass
         {
             this.gen = gen; 
         }
-        //Implementam metoda din interfata
-        public int CalculateAge()
+
+        public DateTime getDataNasterii()
         {
-            throw new NotImplementedException();
+            return this.dataNasterii;
+        }
+
+        public void setDataNasterii(DateTime dataNasterii)
+        {
+            this.dataNasterii = dataNasterii;
+        }
+
+        //Implementam metoda din interfata
+
+        public int CalculateAge(DateTime dataNasterii)
+        {
+            dataNasterii = new DateTime();
+            var age = DateTime.Now.Year - dataNasterii.Year;
+            return age;
         }
     }
 }

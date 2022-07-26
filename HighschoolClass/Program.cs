@@ -59,9 +59,19 @@ namespace HighschoolClass
                 Console.WriteLine(ex.Message);
             }
 
-            SchoolSubject schoolSubject = new SchoolSubject();
-            schoolSubject.setTeacher(teacher2);
-            schoolSubject.validateTeacherSubject("Music");
+            /*SchoolSubject schoolSubject = new SchoolSubject();
+            schoolSubject.validateTeacherSubject("Music");*/
+            Console.WriteLine("\n");
+
+            Console.WriteLine("Calculam data nasterii pentru profesorul 3");
+            Console.WriteLine("-----------------------------------------");
+            Console.WriteLine("\n");
+
+            Teacher teacher3 = new Teacher("Avram", Gen.Feminin, 20);
+            DateTime dataNasterii = DateTime.Now;
+            teacher3.CalculateAge(dataNasterii);
+            teacher3.setDataNasterii(dataNasterii);
+            Console.WriteLine(teacher3.ToString());
 
 
 
