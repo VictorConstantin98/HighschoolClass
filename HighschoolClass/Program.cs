@@ -90,35 +90,44 @@ namespace HighschoolClass
             Console.WriteLine(teacher3.ToString());
             Console.WriteLine("\n");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             // Pt Ex 5
             // Aceasta ar trebui sa arunce o eroare in cazul in care Teacherul din constructor este NULL
+            Console.WriteLine("Initializam doua obiecte de tip SchoolSubject prin cei doi constructori");
+            Console.WriteLine("-----------------------------------------------------------------------");
+            Console.WriteLine("\n");
+            SchoolSubject schoolSubject1 = new SchoolSubject("Math");
+            schoolSubject1.setTeacher(schoolSubject1.getTeacher()); 
+            SchoolSubject schoolSubject2 = new SchoolSubject();
+            Console.WriteLine("\n");
+            schoolSubject2.setTeacher(schoolSubject2.getTeacher());
+            Console.WriteLine(schoolSubject1.ToString());
+            Console.WriteLine(schoolSubject2.ToString());
+            Console.WriteLine("\n");
 
-            /*SchoolSubject ss = new SchoolSubject();
-            ss.setTeacher(ss.getTeacher());*/
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

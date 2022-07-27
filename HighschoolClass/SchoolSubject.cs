@@ -11,6 +11,11 @@ namespace HighschoolClass
         private readonly string nume;
         private Teacher teacher;
 
+        //Constructori
+        public SchoolSubject(string nume)
+        {
+            this.nume = nume;
+        }
         public SchoolSubject() 
         {
             this.teacher = null;
@@ -58,7 +63,7 @@ namespace HighschoolClass
         public override string ToString()
         {
             string schoolSubjectString = "";
-            schoolSubjectString = schoolSubjectString + "Nume materie: " + nume;
+            schoolSubjectString = schoolSubjectString + "Nume materie: " + nume + "\n" + "Teacher: " + teacher; 
             return schoolSubjectString;
         }
 
