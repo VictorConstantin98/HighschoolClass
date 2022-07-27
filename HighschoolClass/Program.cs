@@ -53,14 +53,19 @@ namespace HighschoolClass
             {
                 Console.WriteLine(ex.Message);
             }
+            Console.WriteLine("\n");
 
-            /*SchoolSubject schoolSubject = new SchoolSubject();
-            schoolSubject.validateTeacherSubject("Music");*/
+            Console.WriteLine("Verificam daca profesorul 1 stie sa predea materia Math");
+            Console.WriteLine("-------------------------------------------------------");
+            Console.WriteLine("\n");
+            SchoolSubject schoolSubject = new SchoolSubject("Math");
+            bool verificareBool;
+            verificareBool = schoolSubject.validateTeacherSubject("Math");
+            Console.WriteLine(verificareBool);
             Console.WriteLine("\n");
 
             Console.WriteLine("Calculam data nasterii pentru profesorul 3");
             Console.WriteLine("-----------------------------------------");
-
             Teacher teacher3 = new Teacher("Avram", Gen.Feminin, 20);
             teacher3.addSubject("Math");
             teacher3.addSubject("Sport");

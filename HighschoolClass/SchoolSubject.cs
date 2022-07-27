@@ -59,7 +59,7 @@ namespace HighschoolClass
          * Metoda de validare a Teacher-ului
          */
          
-        /*public bool validateTeacherSubject(string numeMaterie)
+        public bool validateTeacherSubject(string numeMaterie)
         {
             {
                 foreach(string element in teacher.getLista())
@@ -70,12 +70,13 @@ namespace HighschoolClass
                     }
                     else
                     {
+                        return false;
                         throw new Exception("Numele materiei nu corespunde. Incercati cu alt nume.");
                     }
                 }
-                return false;
+                return true;
             }
-        }*/
+        }
 
         //ToString
         public override string ToString()
