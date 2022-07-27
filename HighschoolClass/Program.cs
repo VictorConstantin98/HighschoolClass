@@ -108,6 +108,13 @@ namespace HighschoolClass
                 Console.WriteLine(ex.Message);
             }
 
+            Console.WriteLine("\n");
+            Console.WriteLine("Deep copy schoolSubject2 in schoolSubject3 prin copy constructor");
+            SchoolSubject schoolSubject2 = new SchoolSubject("Math");
+            SchoolSubject schoolSubject3 = new SchoolSubject(schoolSubject2);
+            schoolSubject3.setTeacher(schoolSubject3.getTeacher());
+            Console.WriteLine(schoolSubject3.ToString());
+
             
 
 
