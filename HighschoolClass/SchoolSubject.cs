@@ -15,10 +15,18 @@ namespace HighschoolClass
         public SchoolSubject(string nume)
         {
             this.nume = nume;
+            this.teacher = new Teacher();
         }
         public SchoolSubject() 
         {
             this.teacher = null;
+        }
+
+        //CopyConstructor
+        public SchoolSubject(SchoolSubject ssCopyConstructor)
+        {
+            this.nume = ssCopyConstructor.nume;
+            this.teacher = ssCopyConstructor.teacher;
         }
 
         //Accesori
@@ -34,7 +42,17 @@ namespace HighschoolClass
 
         public void setTeacher (Teacher teacher)
         {
-            this.teacher = teacher;
+            if(this.teacher != null)
+            {
+                this.teacher = teacher;
+            }
+            else
+            {
+                if(this.teacher == null)
+                {
+                    throw new Exception("Teacher-ul este null. Incercati cu alt teacher.");
+                }
+            }
         }
 
         /*
