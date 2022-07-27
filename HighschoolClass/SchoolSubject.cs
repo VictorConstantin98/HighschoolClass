@@ -50,7 +50,7 @@ namespace HighschoolClass
             {
                 if(this.teacher == null)
                 {
-                    throw new Exception("Teacher-ul este null. Incercati cu alt teacher.");
+                    //throw new Exception("Teacher-ul este null. Incercati cu alt teacher.");
                 }
             }
         }
@@ -81,7 +81,7 @@ namespace HighschoolClass
         public override string ToString()
         {
             string schoolSubjectString = "";
-            schoolSubjectString = schoolSubjectString + "Nume materie: " + nume + "\n" + "Teacher: " + teacher; 
+            schoolSubjectString = schoolSubjectString + "Nume materie: " + nume + "\n" + "Teacher: " + teacher + "\n"; 
             return schoolSubjectString;
         }
 

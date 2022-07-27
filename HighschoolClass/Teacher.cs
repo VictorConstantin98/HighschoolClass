@@ -9,7 +9,7 @@ namespace HighschoolClass
     internal class Teacher : Person, IComparable
     {
         private int seniority;
-        private List<string> possibleSchoolSubjectsToTeach;
+        private List<string> possibleSchoolSubjectsToTeach = new List<string>();
 
         //Accesori
         public string getName()
@@ -48,7 +48,15 @@ namespace HighschoolClass
             this.dataNasterii = dataNasterii;
         }
 
-       
+       //Copy constructor
+       public Teacher(Teacher teacherCopyConstructor)
+        {
+            this.name = teacherCopyConstructor.name;
+            this.gen = teacherCopyConstructor.gen;
+            this.seniority = teacherCopyConstructor.seniority;
+            this.possibleSchoolSubjectsToTeach = teacherCopyConstructor.possibleSchoolSubjectsToTeach;
+            this.dataNasterii = teacherCopyConstructor.dataNasterii;
+        }
 
         /*
          * Metoda de adaugat subiecte de predat in lista
@@ -119,7 +127,7 @@ namespace HighschoolClass
         public override string ToString()
         {
             string teacherString = "";
-            teacherString = teacherString + "Name: " + name + "\n" + "Gen: " + gen + "\n" + "Seniority: " + seniority + "\n" + "Data nasterii: " + dataNasterii.ToShortDateString() + "\n" + "School subject: ";
+            teacherString = teacherString + "\n" + "Name: " + name + "\n" + "Gen: " + gen + "\n" + "Seniority: " + seniority + "\n" + "Data nasterii: " + dataNasterii.ToShortDateString() + "\n" + "School subject: ";
             foreach(string element in possibleSchoolSubjectsToTeach)
             {
                 teacherString = teacherString + element.ToString() + " ";
