@@ -138,6 +138,14 @@ namespace HighschoolClass
 
             grade1.changeLast(9);
             Console.WriteLine(grade1.ToString());
+            Console.WriteLine("\n");
+
+            Console.WriteLine("Testam metoda de returnare a numarului de note din lista");
+            Console.WriteLine("--------------------------------------------------------");
+            Console.WriteLine("\n");
+
+            Console.WriteLine(grade1.count());
+
 
 
             

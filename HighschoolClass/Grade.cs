@@ -42,6 +42,15 @@ namespace HighschoolClass
             gradesList.Add(gradeToModify);
         }
 
+        /*
+         * Metoda care intoarce numarul total de note
+         */
+
+        public int count()
+        {
+            return gradesList.Count;
+        }
+
         public override string ToString()
         {
             string gradeString = "";
