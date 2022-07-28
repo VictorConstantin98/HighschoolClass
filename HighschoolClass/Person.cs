@@ -48,8 +48,8 @@ namespace HighschoolClass
 
         public int CalculateAge(DateTime dataNasterii)
         {
-            dataNasterii = new DateTime();
-            var age = DateTime.Now.Year - dataNasterii.Year;
+            var today = DateTime.Today;
+            var age = today.Year - dataNasterii.Year;
             return age;
         }
 

@@ -9,13 +9,18 @@ namespace HighschoolClass
     internal class Grade : IGrade
     {
         private SchoolSubject schoolSubject;
-        private List<int> gradesLst;
+        private List<int> gradesList = new List<int>();
 
         //Implementam metoda din interfata
         public double CalculateGrade()
         {
             throw new NotImplementedException();
-            
+        }
+
+        public Grade(SchoolSubject schoolSubject)
+        {
+            this.schoolSubject = schoolSubject;
+            this.gradesList = new List<int>();
         }
     }
 }

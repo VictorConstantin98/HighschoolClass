@@ -60,7 +60,7 @@ namespace HighschoolClass
             Console.WriteLine("\n");
             SchoolSubject schoolSubject = new SchoolSubject("Math");
             bool verificareBool;
-            verificareBool = schoolSubject.validateTeacherSubject("Math");
+            verificareBool = schoolSubject.validateTeacherSubject("Mah");
             Console.WriteLine(verificareBool);
             Console.WriteLine("\n");
 
@@ -69,7 +69,7 @@ namespace HighschoolClass
             Teacher teacher3 = new Teacher("Avram", Gen.Feminin, 20);
             teacher3.addSubject("Math");
             teacher3.addSubject("Sport");
-            DateTime dataNasterii = DateTime.Now;
+            DateTime dataNasterii = new DateTime(1980, 5, 20);
             teacher3.CalculateAge(dataNasterii);
             teacher3.setDataNasterii(dataNasterii);
             Console.WriteLine(teacher3.ToString());

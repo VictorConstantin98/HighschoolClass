@@ -61,21 +61,18 @@ namespace HighschoolClass
          
         public bool validateTeacherSubject(string numeMaterie)
         {
+            foreach (string element in teacher.getLista())
             {
-                foreach(string element in teacher.getLista())
+                if (this.nume == numeMaterie)
                 {
-                    if(nume == numeMaterie)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                        throw new Exception("Numele materiei nu corespunde. Incercati cu alt nume.");
-                    }
+                    return true;
                 }
-                return true;
+                else
+                {
+                    throw new Exception("Numele materiei nu corespunde. Incercati cu alt nume.");
+                }
             }
+            return true;
         }
 
         //ToString
