@@ -32,6 +32,16 @@ namespace HighschoolClass
             gradesList.Add(gradeToAdd);
         }
 
+        /*
+         * Metoda de modificare a ultimei note din lista
+         */
+
+        public void changeLast(int gradeToModify)
+        {
+            gradesList.RemoveAt(gradesList.Count - 1);
+            gradesList.Add(gradeToModify);
+        }
+
         public override string ToString()
         {
             string gradeString = "";

@@ -132,6 +132,13 @@ namespace HighschoolClass
             Console.WriteLine(grade1.ToString());
             Console.WriteLine("\n");
 
+            Console.WriteLine("Testam metoda de modificare a ultimei note din lista");
+            Console.WriteLine("----------------------------------------------------");
+            Console.WriteLine("\n");
+
+            grade1.changeLast(9);
+            Console.WriteLine(grade1.ToString());
+
 
             
 
