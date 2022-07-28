@@ -11,12 +11,6 @@ namespace HighschoolClass
         private SchoolSubject schoolSubject;
         private List<int> gradesList = new List<int>();
 
-        //Implementam metoda din interfata
-        public double CalculateGrade()
-        {
-            throw new NotImplementedException();
-        }
-
         public Grade(SchoolSubject schoolSubject)
         {
             this.schoolSubject = schoolSubject;
@@ -51,6 +45,15 @@ namespace HighschoolClass
             return gradesList.Count;
         }
 
+        //Implementam metoda din interfata
+        public double CalculateGrade()
+        {
+            double totalGrades;
+            totalGrades = gradesList.Average();
+            return totalGrades;
+        } 
+
+        //ToString
         public override string ToString()
         {
             string gradeString = "";
@@ -61,5 +64,6 @@ namespace HighschoolClass
             }
             return gradeString;
         }
+
     }
 }

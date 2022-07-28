@@ -145,17 +145,25 @@ namespace HighschoolClass
             Console.WriteLine("\n");
 
             Console.WriteLine(grade1.count());
+            Console.WriteLine("\n");
+
+            Console.WriteLine("Testam metoda CalculateGrade pentru schoolSubject3");
+            Console.WriteLine("--------------------------------------------------");
+            Console.WriteLine("\n");
+
+            double rezultat = grade1.CalculateGrade();
+            Console.WriteLine(rezultat);
 
 
 
-            
 
 
 
 
 
 
-            
+
+
 
 
 
