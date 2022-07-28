@@ -120,6 +120,17 @@ namespace HighschoolClass
             Console.WriteLine("-----------------------------------------------------------");
             Teacher teacher4 = new Teacher(teacher1);
             Console.WriteLine(teacher4.ToString());
+            Console.WriteLine("\n");
+
+            Console.WriteLine("Construim un obiect de tip Grade si îi adaugam doua note in lista");
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.WriteLine("\n");
+
+            Grade grade1 = new Grade(schoolSubject3);
+            grade1.add(8);
+            grade1.add(10);
+            Console.WriteLine(grade1.ToString());
+            Console.WriteLine("\n");
 
 
             

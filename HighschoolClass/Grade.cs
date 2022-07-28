@@ -22,5 +22,25 @@ namespace HighschoolClass
             this.schoolSubject = schoolSubject;
             this.gradesList = new List<int>();
         }
+
+        /*
+         * Metoda de adaugare a unei note
+         */
+
+        public void add(int gradeToAdd)
+        {
+            gradesList.Add(gradeToAdd);
+        }
+
+        public override string ToString()
+        {
+            string gradeString = "";
+            gradeString = gradeString + schoolSubject + "Grades: ";
+            foreach(int element in gradesList)
+            {
+                gradeString = gradeString + element.ToString() + " ";
+            }
+            return gradeString;
+        }
     }
 }
