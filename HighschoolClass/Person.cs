@@ -12,6 +12,13 @@ namespace HighschoolClass
         protected Gen gen;
         protected DateTime dataNasterii;
 
+        //Implementam metoda din interfata
+        public int CalculateAge()
+        {
+            var today = DateTime.Today;
+            var age = today.Year - this.dataNasterii.Year;
+            return age;
+        }
 
         //Accesori
         public string getName()
@@ -42,15 +49,6 @@ namespace HighschoolClass
         public void setDataNasterii(DateTime dataNasterii)
         {
             this.dataNasterii = dataNasterii;
-        }
-
-        //Implementam metoda din interfata
-
-        public int CalculateAge(DateTime dataNasterii)
-        {
-            var today = DateTime.Today;
-            var age = today.Year - dataNasterii.Year;
-            return age;
         }
 
         /*

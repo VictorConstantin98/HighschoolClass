@@ -19,8 +19,8 @@
 7. Implementeaza o metoda de adaugare a unei note (aceasta metoda se numeste simplu add)
 8. Implementeaza o metoda de modificare ultima nota (aceasta metoda se numeste simplu changeLast)
 9. Implementeaza operatorul index ([]) care intoarce nota de la respectiva pozitie;
-10.Implementeaza o metoda care intoarce numarul total de note (aceasta metoda se numeste count);
+10.Implementeaza o metoda care intoarce numarul total de note (aceasta metoda se numeste count); -- To Do
 11. Implementeaza metoda CalculateGrade care intoarce media notelor de la respectiva materie
-12. Implementeaza validarea notelor oriunde acestea se modifica pentru a nu putea fi decat intre 1 si 10. In caz contrar se arunca o excepti ArgumentOutOfRange si mesajul cu ce fel de note trebuie adaugate ca validarea sa fie buna
+12. -- To DO Implementeaza validarea notelor oriunde acestea se modifica pentru a nu putea fi decat intre 1 si 10. In caz contrar se arunca o excepti ArgumentOutOfRange si mesajul cu ce fel de note trebuie adaugate ca validarea sa fie buna
 
  

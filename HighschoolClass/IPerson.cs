@@ -8,6 +8,6 @@ namespace HighschoolClass
 {
     internal interface IPerson
     {
-        public abstract int CalculateAge(DateTime dataNasterii);
+        public abstract int CalculateAge();
     }
 }

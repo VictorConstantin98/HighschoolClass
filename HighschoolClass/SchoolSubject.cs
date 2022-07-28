@@ -26,7 +26,7 @@ namespace HighschoolClass
         public SchoolSubject(SchoolSubject ssCopyConstructor)
         {
             this.nume = ssCopyConstructor.nume;
-            this.teacher = ssCopyConstructor.teacher;
+            this.teacher = new Teacher(ssCopyConstructor.teacher);
         }
 
         //Accesori
@@ -42,7 +42,7 @@ namespace HighschoolClass
 
         public void setTeacher (Teacher teacher)
         {
-            if(this.teacher != null)
+            if(teacher != null)
             {
                 this.teacher = teacher;
             }
@@ -55,22 +55,38 @@ namespace HighschoolClass
             }
         }
 
+        public void setTeacherDeepCopy(Teacher teacher)
+        {
+            if(teacher != null)
+            {
+                this.teacher = new Teacher(teacher);
+            }
+            else
+            {
+                if (teacher == null)
+                {
+                    throw new Exception("Teacher-ul este null. Incercati cu alt teacher.");
+                }
+            }
+        }
+
         /*
          * Metoda de validare a Teacher-ului
          */
          
-        public bool validateTeacherSubject(string numeMaterie)
+        public bool validateTeacherSubject()
         {
+            bool rezultatValidare = false;
             foreach (string element in teacher.getLista())
             {
-                if (this.nume == numeMaterie)
+                if (this.nume == element)
                 {
-                    return true;
+                    rezultatValidare = true;
                 }
-                else
-                {
-                    throw new Exception("Numele materiei nu corespunde. Incercati cu alt nume.");
-                }
+            }
+            if(!rezultatValidare)
+            {
+                throw new Exception("Numele materiei nu corespunde. Incercati cu alt nume.");
             }
             return true;
         }

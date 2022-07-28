@@ -32,8 +32,9 @@ namespace HighschoolClass
 
         public void changeLast(int gradeToModify)
         {
-            gradesList.RemoveAt(gradesList.Count - 1);
-            gradesList.Add(gradeToModify);
+           // gradesList.RemoveAt(gradesList.Count - 1);
+           // gradesList.Add(gradeToModify);
+            gradesList[gradesList.Count - 1] = gradeToModify;
         }
 
         /*

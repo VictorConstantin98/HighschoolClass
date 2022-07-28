@@ -60,19 +60,37 @@ namespace HighschoolClass
             Console.WriteLine("\n");
             SchoolSubject schoolSubject = new SchoolSubject("Math");
             bool verificareBool;
-            verificareBool = schoolSubject.validateTeacherSubject("Mah");
+            try
+            {
+                verificareBool = schoolSubject.validateTeacherSubject();
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                verificareBool = false;
+            }
             Console.WriteLine(verificareBool);
             Console.WriteLine("\n");
 
+
+
+            teacher1.addSubject("Math");
+            schoolSubject.setTeacher(teacher1);
+            verificareBool = schoolSubject.validateTeacherSubject();
+            Console.WriteLine(verificareBool);
+            Console.WriteLine("\n");
+
+
             Console.WriteLine("Calculam data nasterii pentru profesorul 3");
             Console.WriteLine("-----------------------------------------");
+            Console.WriteLine("\n");
             Teacher teacher3 = new Teacher("Avram", Gen.Feminin, 20);
             teacher3.addSubject("Math");
             teacher3.addSubject("Sport");
             DateTime dataNasterii = new DateTime(1980, 5, 20);
-            teacher3.CalculateAge(dataNasterii);
             teacher3.setDataNasterii(dataNasterii);
-            Console.WriteLine(teacher3.ToString());
+            int rezultatAge = teacher3.CalculateAge();
+            Console.WriteLine(rezultatAge);
             Console.WriteLine("\n");
 
             Console.WriteLine("Verificam daca profesorul 3 stie sa predea materia sport");
@@ -80,6 +98,9 @@ namespace HighschoolClass
             Console.WriteLine("\n");
             bool verificareMaterie;
             verificareMaterie = teacher3.validateSchoolSubject("Sport");
+            Console.WriteLine(verificareMaterie);
+            Console.WriteLine("\n");
+            verificareMaterie = teacher3.validateSchoolSubject("Spor");
             Console.WriteLine(verificareMaterie);
             Console.WriteLine("\n");
 
@@ -91,15 +112,37 @@ namespace HighschoolClass
 
             // Pt Ex 5
             // Aceasta ar trebui sa arunce o eroare in cazul in care Teacherul din constructor este NULL
+            
+            //SetTeacher cu Shallow Copy.
+
+            SchoolSubject schoolSubject5 = new SchoolSubject();
+            schoolSubject5.setTeacher(teacher1);
+            Console.WriteLine(schoolSubject5.getTeacher().getName());
+            Console.WriteLine("\n");
+
+            teacher1.setName("Costi");
+            Console.WriteLine(schoolSubject5.getTeacher().getName());
+            Console.WriteLine("\n");
+
+            //SetTeacher cu Deep Copy.
+
+            SchoolSubject schoolSubject6 = new SchoolSubject();
+            schoolSubject6.setTeacherDeepCopy(teacher1);
+            Console.WriteLine(schoolSubject6.getTeacher().getName());
+            Console.WriteLine("\n");
+
+            teacher1.setName("Alex");
+            Console.WriteLine(schoolSubject6.getTeacher().getName());
+            Console.WriteLine("\n");
+
+
             Console.WriteLine("Initializam un obiect de tip SchoolSubject cu Teacher null si prindem exceptia");
-            Console.WriteLine("-----------------------------------------------------------------------");
+            Console.WriteLine("------------------------------------------------------------------------------");
             Console.WriteLine("\n");
             SchoolSubject schoolSubject1 = new SchoolSubject();
-            schoolSubject1.setTeacher(schoolSubject1.getTeacher());
-            Console.WriteLine(schoolSubject1.ToString());
             try
             {
-                schoolSubject1.setTeacher(schoolSubject1.getTeacher());
+                schoolSubject1.setTeacherDeepCopy(schoolSubject1.getTeacher());
             }
             catch(Exception ex)
             {

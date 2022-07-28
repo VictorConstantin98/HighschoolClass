@@ -127,7 +127,12 @@ namespace HighschoolClass
         public override string ToString()
         {
             string teacherString = "";
-            teacherString = teacherString + "\n" + "Name: " + name + "\n" + "Gen: " + gen + "\n" + "Seniority: " + seniority + "\n" + "Data nasterii: " + dataNasterii.ToShortDateString() + "\n" + "School subject: ";
+            teacherString = teacherString
+                + "\n" + "Name: " + name
+                + "\n" + "Gen: " + gen
+                + "\n" + "Seniority: " + seniority 
+                + "\n" + "Data nasterii: " + dataNasterii.ToShortDateString() 
+                + "\n" + "School subject: ";
             foreach(string element in possibleSchoolSubjectsToTeach)
             {
                 teacherString = teacherString + element.ToString() + " ";
