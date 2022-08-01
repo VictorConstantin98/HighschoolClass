@@ -12,6 +12,8 @@ namespace HighschoolClass
         protected Gen gen;
         protected DateTime dataNasterii;
 
+
+
         //Implementam metoda din interfata
         public int CalculateAge()
         {

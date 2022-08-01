@@ -23,4 +23,13 @@
 11. Implementeaza metoda CalculateGrade care intoarce media notelor de la respectiva materie
 12. -- To DO Implementeaza validarea notelor oriunde acestea se modifica pentru a nu putea fi decat intre 1 si 10. In caz contrar se arunca o excepti ArgumentOutOfRange si mesajul cu ce fel de note trebuie adaugate ca validarea sa fie buna
 
+
+1. Sa sa implementeze Constructorul cu toti parametrii ai clasei Peron. Trebuie sa fie Protected;
+2. Sa se implementeze pentru clasa Student Constructorul cu toti parametrii mai putin Lista. (Sa se foloseasca constructorul din clasa de baza ca si ajutor)(conceptul de base)
+3. Sa se implemeteze o metodata de adaugare Materie (SchoolSubject) in Student. (Prin intermediul listei Grade din student) (Conceptul de asignare a unei materii unui student)
+4. Sa se implementeze o metodata care adauga o nota la o anumita materie unui student (Numele materiei este data ca parametru)
+5. Sa se implementeze o metoda care returneaza media la o anumita materie a studentului. 
+6. sa se implementeze o metoda care implementeaza CalculateGrade (aceasta trebuie sa intoarca media studentului la toate materiile) 
+
+
  
