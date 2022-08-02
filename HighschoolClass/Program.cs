@@ -197,6 +197,8 @@ namespace HighschoolClass
             double rezultat = grade1.CalculateGrade();
             Console.WriteLine(rezultat);
 
+            
+
 
 
 

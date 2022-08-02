@@ -12,6 +12,13 @@ namespace HighschoolClass
         protected Gen gen;
         protected DateTime dataNasterii;
 
+        //Constructor explicit
+        protected Person(string name, Gen gen, DateTime dataNasterii)
+        {
+            this.name = name;
+            this.gen = gen;
+            this.dataNasterii = dataNasterii;
+        }
 
 
         //Implementam metoda din interfata
