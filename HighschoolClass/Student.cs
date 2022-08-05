@@ -18,14 +18,43 @@ namespace HighschoolClass
             this.classGrade = classGrade;
             this.name = name;
             this.gen = gen;
+            this.dataNasterii = dataNasterii;
             this.studentGradeList = new List<Grade>();
-            this.dataNasterii= dataNasterii;
         }
 
         //Implementam metoda din interfata
         public double CalculateGrade()
         {
             throw new NotImplementedException();
+        }
+
+        /*
+         * Metoda de adaugare materie
+         */
+         
+        public void adaugareMaterie(SchoolSubject schoolSubjectToAdd)
+        {
+            Grade gradeToAdd = new Grade(schoolSubjectToAdd);
+            studentGradeList.Add(gradeToAdd);
+        }
+
+
+        //ToString
+        public override string ToString()
+        {
+            string afisareString = "";
+            afisareString = afisareString
+                + "\n" + "Nota materie: " + classGrade
+                + "\n" + "Nume student : " + name
+                + "\n" + "Gen: " + gen
+                + "\n" + "Data nasteriii: " + dataNasterii.ToShortDateString()
+                + "\n" + "Lista note: "
+                + "\n";
+            foreach(Grade grade in studentGradeList)
+            {
+                afisareString = afisareString + grade.ToString();
+            }
+            return afisareString;
         }
     }
 }

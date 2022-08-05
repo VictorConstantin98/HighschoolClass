@@ -12,6 +12,12 @@ namespace HighschoolClass
         protected Gen gen;
         protected DateTime dataNasterii;
 
+        //Constructor implicit
+        public Person()
+        {
+
+        }
+
         //Constructor explicit
         public Person(string name, Gen gen, DateTime dataNasterii)
         {
@@ -20,6 +26,13 @@ namespace HighschoolClass
             this.dataNasterii = dataNasterii;
         }
 
+        //Copy constructor
+        public Person(Person personCopyConstructor)
+        {
+            this.name = personCopyConstructor.name;
+            this.gen = personCopyConstructor.gen;
+            this.dataNasterii = personCopyConstructor.dataNasterii;
+        }
 
         //Implementam metoda din interfata
         public int CalculateAge()

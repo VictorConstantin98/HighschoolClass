@@ -196,8 +196,21 @@ namespace HighschoolClass
 
             double rezultat = grade1.CalculateGrade();
             Console.WriteLine(rezultat);
+            Console.WriteLine("\n");
 
+            Console.WriteLine("Testam metoda de adaugare materie in student");
+            Console.WriteLine("--------------------------------------------");
+            Console.WriteLine("\n");
             
+            Student student1 = new Student(8, "Ionut", Gen.Masculin, dataNasterii);
+            DateTime dataNasteriiIonut = new DateTime(2000, 6, 14);
+            SchoolSubject schoolSubject7 = new SchoolSubject("Physics");
+            student1.setDataNasterii(dataNasteriiIonut);
+            student1.adaugareMaterie(schoolSubject1);
+            student1.adaugareMaterie(schoolSubject7);
+            
+            Console.WriteLine(student1.ToString());
+
 
 
 
