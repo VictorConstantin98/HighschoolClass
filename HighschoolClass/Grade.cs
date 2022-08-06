@@ -17,6 +17,21 @@ namespace HighschoolClass
             this.gradesList = new List<int>();
         }
 
+        //Accesori
+        public SchoolSubject getSchoolSubject()
+        {
+            return this.schoolSubject;
+        }
+
+        /*
+         * Metoda ce returneaza numele lui grade
+         */
+
+        public string getGradeName()
+        {
+            return schoolSubject.getNume();
+        }
+
         /*
          * Metoda de adaugare a unei note
          */
@@ -63,6 +78,7 @@ namespace HighschoolClass
             {
                 gradeString = gradeString + element.ToString() + " ";
             }
+            gradeString = gradeString + "\n";
             return gradeString;
         }
 

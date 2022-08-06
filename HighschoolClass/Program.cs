@@ -201,15 +201,46 @@ namespace HighschoolClass
             Console.WriteLine("Testam metoda de adaugare materie in student");
             Console.WriteLine("--------------------------------------------");
             Console.WriteLine("\n");
-            
+
+            schoolSubject1 = new SchoolSubject("Math");
             Student student1 = new Student(8, "Ionut", Gen.Masculin, dataNasterii);
             DateTime dataNasteriiIonut = new DateTime(2000, 6, 14);
             SchoolSubject schoolSubject7 = new SchoolSubject("Physics");
             student1.setDataNasterii(dataNasteriiIonut);
             student1.adaugareMaterie(schoolSubject1);
             student1.adaugareMaterie(schoolSubject7);
-            
             Console.WriteLine(student1.ToString());
+            Console.WriteLine("\n");
+
+            Console.WriteLine("Testam metoda de adaugare a unei note la o materie");
+            Console.WriteLine("--------------------------------------------------");
+
+            student1.adaugareNotaLaOMaterie(9, "Math");
+            student1.adaugareNotaLaOMaterie(10, "Math");
+            student1.adaugareNotaLaOMaterie(10, "Physics");
+            student1.adaugareNotaLaOMaterie(8, "Romana");
+            Console.WriteLine(student1.ToString());
+
+            Console.WriteLine("Testam metoda de calculare a mediei pentru o anumita materie.");
+            Console.WriteLine("-------------------------------------------------------------");
+            Console.WriteLine("\n");
+
+            double medie;
+            medie = student1.medieNoteLaOAnumitaMaterie("Math");
+            Console.WriteLine(medie);
+            Console.WriteLine("\n");
+
+            Console.WriteLine("Testam metoda de calculare a mediei generale");
+            Console.WriteLine("--------------------------------------------");
+            Console.WriteLine("\n");
+
+            double medieGenerala;
+            medieGenerala = student1.CalculateGrade();
+            Console.WriteLine(medieGenerala);
+            Console.WriteLine("\n");
+
+
+
 
 
 
