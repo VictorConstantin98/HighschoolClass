@@ -1,25 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\.NET Projects\\HighschoolClass\\HighschoolClass\\HighschoolClass.csproj": {}
+    "D:\\Work\\Proiecte\\HighschoolClass\\HighschoolClass\\HighschoolClass.csproj": {}
   },
   "projects": {
-    "C:\\.NET Projects\\HighschoolClass\\HighschoolClass\\HighschoolClass.csproj": {
+    "D:\\Work\\Proiecte\\HighschoolClass\\HighschoolClass\\HighschoolClass.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\.NET Projects\\HighschoolClass\\HighschoolClass\\HighschoolClass.csproj",
+        "projectUniqueName": "D:\\Work\\Proiecte\\HighschoolClass\\HighschoolClass\\HighschoolClass.csproj",
         "projectName": "HighschoolClass",
-        "projectPath": "C:\\.NET Projects\\HighschoolClass\\HighschoolClass\\HighschoolClass.csproj",
-        "packagesPath": "C:\\Users\\alexandru.crijman\\.nuget\\packages\\",
-        "outputPath": "C:\\.NET Projects\\HighschoolClass\\HighschoolClass\\obj\\",
+        "projectPath": "D:\\Work\\Proiecte\\HighschoolClass\\HighschoolClass\\HighschoolClass.csproj",
+        "packagesPath": "C:\\Users\\Costi\\.nuget\\packages\\",
+        "outputPath": "D:\\Work\\Proiecte\\HighschoolClass\\HighschoolClass\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\alexandru.crijman\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Costi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"

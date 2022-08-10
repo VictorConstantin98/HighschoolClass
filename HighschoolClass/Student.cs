@@ -8,14 +8,14 @@ namespace HighschoolClass
 {
     internal class Student : Person, IGrade
     {
-        private int classGrade;
+        private int yearClass;
         private List<Grade> studentGradeList;
 
         //Constructor explicit 
 
-        public Student(int classGrade, string name, Gen gen, DateTime dataNasterii) : base(name, gen, dataNasterii)
+        public Student(int yearClass, string name, Gen gen, DateTime dataNasterii) : base(name, gen, dataNasterii)
         {
-            this.classGrade = classGrade;
+            this.yearClass = yearClass;
             this.name = name;
             this.gen = gen;
             this.dataNasterii = dataNasterii;
@@ -96,7 +96,7 @@ namespace HighschoolClass
         {
             string afisareString = "";
             afisareString = afisareString
-                + "\n" + "Media studentului: " + classGrade
+                + "\n" + "Clasa: " + yearClass
                 + "\n" + "Nume student : " + name
                 + "\n" + "Gen: " + gen
                 + "\n" + "Data nasteriii: " + dataNasterii.ToShortDateString()
