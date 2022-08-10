@@ -215,10 +215,10 @@ namespace HighschoolClass
             Console.WriteLine("Testam metoda de adaugare a unei note la o materie");
             Console.WriteLine("--------------------------------------------------");
 
-            student1.adaugareNotaLaOMaterie(9, "Math");
+            student1.adaugareNotaLaOMaterie(8, "Math");
             student1.adaugareNotaLaOMaterie(10, "Math");
             student1.adaugareNotaLaOMaterie(10, "Physics");
-            student1.adaugareNotaLaOMaterie(8, "Romana");
+            student1.adaugareNotaLaOMaterie(9, "Romana");
             Console.WriteLine(student1.ToString());
 
             Console.WriteLine("Testam metoda de calculare a mediei pentru o anumita materie.");
@@ -239,6 +239,27 @@ namespace HighschoolClass
             Console.WriteLine(medieGenerala);
             Console.WriteLine("\n");
 
+            Console.WriteLine("Testam metoda statica YearStudentEvaluation");
+            Console.WriteLine("-------------------------------------------");
+            Console.WriteLine("\n");
+
+            Console.WriteLine("Cazul 1");
+            Student.YearStudentEvaluation(student1);
+            Console.WriteLine("\n");
+
+            Console.WriteLine("Cazul 2");
+            Student studentAbsolvent = new Student(10, "Alex", Gen.Masculin, dataNasterii);
+            studentAbsolvent.adaugareNotaLaOMaterie(2, "Matematica");
+            studentAbsolvent.adaugareNotaLaOMaterie(3, "Romana");
+
+            try
+            {
+                Student.YearStudentEvaluation(studentAbsolvent);
+            }
+            catch(YearOutOfRangeException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
 
 
