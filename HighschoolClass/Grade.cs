@@ -17,10 +17,31 @@ namespace HighschoolClass
             this.gradesList = new List<int>();
         }
 
+        /// suprascrincarcare operator
+        /// definerea operatior pentru clasa respectiva
+        /// 
+
+        /*ublic int this[int key]
+        { 
+            get +> GetVa
+            
+        }*/
+        /*Operatori:
+        ++
+        +
+        +=
+        ==*/
+
+
         //Accesori
         public SchoolSubject getSchoolSubject()
         {
             return this.schoolSubject;
+        }
+
+        public List<int> getGradesList()
+        {
+            return this.gradesList;
         }
 
         /*
@@ -38,7 +59,14 @@ namespace HighschoolClass
 
         public void add(int gradeToAdd)
         {
-            gradesList.Add(gradeToAdd);
+            if(gradeToAdd >=1 && gradeToAdd <=10)
+            {
+                gradesList.Add(gradeToAdd);
+            }
+            else
+            {
+                throw new ArgumentOutOfRangeException("Notele trebuie sa fie intre 1 si 10");
+            }
         }
 
         /*
@@ -49,7 +77,15 @@ namespace HighschoolClass
         {
            // gradesList.RemoveAt(gradesList.Count - 1);
            // gradesList.Add(gradeToModify);
-            gradesList[gradesList.Count - 1] = gradeToModify;
+           if(gradeToModify >=1 && gradeToModify <=10)
+            {
+                gradesList[gradesList.Count - 1] = gradeToModify;
+            }
+           else
+            {
+                throw new ArgumentOutOfRangeException("Notele trebuie sa fie intre 1 si 10");
+            }
+            
         }
 
         /*
@@ -82,5 +118,6 @@ namespace HighschoolClass
             return gradeString;
         }
 
+        
     }
 }

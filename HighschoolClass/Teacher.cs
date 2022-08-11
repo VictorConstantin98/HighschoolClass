@@ -90,7 +90,7 @@ namespace HighschoolClass
             {
                 if(seniority <= 0)
                 {
-                    //throw new Exception("Vechimea profesorului nu corespunde.");
+                    throw new Exception("Vechimea profesorului nu corespunde.");
                 }
             }
         }

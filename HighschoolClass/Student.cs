@@ -21,6 +21,11 @@ namespace HighschoolClass
             this.dataNasterii = dataNasterii;
             this.studentGradeList = new List<Grade>();
         }
+        //Getter lista materiii
+        public List<Grade> getListOfGrades()
+        {
+            return this.studentGradeList;
+        }
 
         //Implementam metoda din interfata
         public double CalculateGrade()
@@ -64,7 +69,7 @@ namespace HighschoolClass
             }
             if(aux!=true)
             {
-                //De aruncat o exceptie custom
+                throw new SubjectNotFoundException();
             }
         }
         
@@ -95,18 +100,41 @@ namespace HighschoolClass
          * Metoda statica care verifica daca media studentului este peste 5 si are cel putin o nota la fiecare materie
          */
 
-        public static void YearStudentEvaluation(Student student)
+        public static bool YearStudentEvaluation(Student student)
         {
-            if(student.CalculateGrade() >= 5 && student.CalculateGrade() <=12)
+            bool aux = true;
+            try
             {
-                Console.WriteLine("Studentul " + student.getName() + " a trecut clasa");
-                
+                if (student.CalculateGrade() >= 5)
+                {
+                    foreach (Grade grade in student.studentGradeList)
+                    {
+                        if (grade.getGradesList().Count() < 0)
+                        {
+                            aux = false;
+                        }
+                    }
+                    if (aux == true)
+                    {
+                        student.yearClass++;
+                        if (student.yearClass > 12)
+                        {
+                            Console.WriteLine("Studentul " + student.getName() + " a absolvit scoala.");
+                            throw new YearOutOfRangeException();
+                        }
+                        Console.WriteLine("Studentul " + student.getName() + " a trecut clasa.");
+                        return true;
+                    }
+                }
+                return false;
             }
-            else
+            catch(Exception ex)
             {
-                throw new YearOutOfRangeException();
+                return false;
             }
+            
         }
+           
         
         //ToString
         public override string ToString()

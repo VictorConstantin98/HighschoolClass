@@ -42,7 +42,15 @@ namespace HighschoolClass
             teacher2.addSubject("Geography");
             teacher2.addSubject("Music");
             teacher2.addSubject("Art");
-            teacher2.settingSeniority(-1);
+            try
+            {
+                teacher2.settingSeniority(-1);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
             Console.WriteLine(teacher2.ToString());
 
             try
@@ -218,7 +226,15 @@ namespace HighschoolClass
             student1.adaugareNotaLaOMaterie(8, "Math");
             student1.adaugareNotaLaOMaterie(10, "Math");
             student1.adaugareNotaLaOMaterie(10, "Physics");
-            student1.adaugareNotaLaOMaterie(9, "Romana");
+            try
+            {
+                student1.adaugareNotaLaOMaterie(9, "Romana");
+            }
+            catch(SubjectNotFoundException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
             Console.WriteLine(student1.ToString());
 
             Console.WriteLine("Testam metoda de calculare a mediei pentru o anumita materie.");
@@ -248,9 +264,11 @@ namespace HighschoolClass
             Console.WriteLine("\n");
 
             Console.WriteLine("Cazul 2");
-            Student studentAbsolvent = new Student(10, "Alex", Gen.Masculin, dataNasterii);
-            studentAbsolvent.adaugareNotaLaOMaterie(2, "Matematica");
-            studentAbsolvent.adaugareNotaLaOMaterie(3, "Romana");
+            Student studentAbsolvent = new Student(13, "Alex", Gen.Masculin, dataNasterii);
+            studentAbsolvent.adaugareMaterie(schoolSubject7);
+            studentAbsolvent.adaugareMaterie(schoolSubject2);
+            studentAbsolvent.adaugareNotaLaOMaterie(5, "Physics");
+            studentAbsolvent.adaugareNotaLaOMaterie(5, "Math");
 
             try
             {
@@ -258,11 +276,58 @@ namespace HighschoolClass
             }
             catch(YearOutOfRangeException ex)
             {
+                
+            }
+            Console.WriteLine("\n");
+
+            Console.WriteLine("Cazul 3");
+            Student studentCaz3 = new Student(12, "George", Gen.Masculin, dataNasterii);
+            studentCaz3.adaugareMaterie(schoolSubject3);
+            studentCaz3.adaugareMaterie(schoolSubject1);
+            bool rezultatCaz3 = Student.YearStudentEvaluation(studentCaz3);
+            Console.WriteLine(rezultatCaz3);
+            Console.WriteLine("\n");
+
+            Console.WriteLine("Cazul 4");
+            Student studentCaz4 = new Student(12, "Maria", Gen.Feminin, dataNasterii);
+            studentCaz4.adaugareMaterie(schoolSubject2);
+            studentCaz4.adaugareMaterie(schoolSubject7);
+            studentCaz4.adaugareNotaLaOMaterie(2, "Math");
+            studentCaz4.adaugareNotaLaOMaterie(3, "Physics");
+            bool rezultatCaz4 = Student.YearStudentEvaluation(studentCaz4);
+            Console.WriteLine(rezultatCaz4);
+            Console.WriteLine("\n");
+
+            Console.WriteLine("Verificam daca notele sunt cuprinse intre 1 si 10");
+
+            Console.WriteLine("Cazul 1: Intre 1 si 10");
+            grade1.add(5);
+            Console.WriteLine("\n");
+
+            Console.WriteLine("Cazul 2: Mai mare ca 10");
+            try
+            {
+                grade1.add(11);
+            }
+            catch(ArgumentOutOfRangeException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            Console.WriteLine("Cazul3: Main mic decat 1");
+            try
+            {
+                grade1.add(0);
+            }
+            catch(ArgumentOutOfRangeException ex)
+            {
                 Console.WriteLine(ex.Message);
             }
 
 
+            //Trebuie facute validaraile si pentru metoda de changeLast (verificate si cazurile respective)
 
+            
 
 
 
