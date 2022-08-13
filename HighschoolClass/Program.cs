@@ -298,13 +298,15 @@ namespace HighschoolClass
             Console.WriteLine(rezultatCaz4);
             Console.WriteLine("\n");
 
-            Console.WriteLine("Verificam daca notele sunt cuprinse intre 1 si 10");
-
+            Console.WriteLine("Verificam daca notele sunt cuprinse intre 1 si 10 cu metoda add");
+            Console.WriteLine("\n");
             Console.WriteLine("Cazul 1: Intre 1 si 10");
             grade1.add(5);
+            Console.WriteLine(grade1);
             Console.WriteLine("\n");
 
             Console.WriteLine("Cazul 2: Mai mare ca 10");
+            Console.WriteLine("\n");
             try
             {
                 grade1.add(11);
@@ -313,8 +315,10 @@ namespace HighschoolClass
             {
                 Console.WriteLine(ex.Message);
             }
+            Console.WriteLine("\n");
 
-            Console.WriteLine("Cazul3: Main mic decat 1");
+            Console.WriteLine("Cazul3: Mai mic decat 1");
+            Console.WriteLine("\n");
             try
             {
                 grade1.add(0);
@@ -324,10 +328,49 @@ namespace HighschoolClass
                 Console.WriteLine(ex.Message);
             }
 
+            Console.WriteLine("\n");
 
-            //Trebuie facute validaraile si pentru metoda de changeLast (verificate si cazurile respective)
+            Console.WriteLine("Verificam daca notele sunt cuprinse intre 1 si 10 cu metoda changeLast");
+            Console.WriteLine("----------------------------------------------------------------------");
+            Console.WriteLine("\n");
+
+            Console.WriteLine("Cazul 1: Intre 1 si 10");
+            Console.WriteLine("\n");
+            grade1.changeLast(7);
+            Console.WriteLine(grade1);
+
+            Console.WriteLine("Cazul 2: Mai mare ca 10");
+            Console.WriteLine("\n");
+            try
+            {
+                grade1.changeLast(11);
+            }
+            catch(ArgumentOutOfRangeException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            Console.WriteLine("\n");
+
+            Console.WriteLine("Cazul 3: Mai mic ca 1");
+            Console.WriteLine("\n");
+            try
+            {
+                grade1.changeLast(0);
+            }
+            catch(ArgumentOutOfRangeException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            Console.WriteLine("\n");
+
+
+
+
+
 
             
+
+
 
 
 
