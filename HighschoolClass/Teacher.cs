@@ -32,6 +32,11 @@ namespace HighschoolClass
             this.possibleSchoolSubjectsToTeach = possibleSchoolSubjectsToTeach;
         }
 
+        public int getSeniority()
+        {
+            return this.seniority;
+        }
+
         //Constructor implicit
         public Teacher()
         {
