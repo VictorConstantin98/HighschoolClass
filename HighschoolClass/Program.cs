@@ -276,7 +276,7 @@ namespace HighschoolClass
             }
             catch(YearOutOfRangeException ex)
             {
-                
+                Console.WriteLine(ex.Message);
             }
             Console.WriteLine("\n");
 
@@ -299,6 +299,7 @@ namespace HighschoolClass
             Console.WriteLine("\n");
 
             Console.WriteLine("Verificam daca notele sunt cuprinse intre 1 si 10 cu metoda add");
+            Console.WriteLine("---------------------------------------------------------------");
             Console.WriteLine("\n");
             Console.WriteLine("Cazul 1: Intre 1 si 10");
             grade1.add(5);
@@ -371,6 +372,7 @@ namespace HighschoolClass
             Console.WriteLine("\n");
 
             Console.WriteLine("1) Definim 5 profesori");
+            Console.WriteLine("----------------------");
             Teacher p1 = new Teacher("Ionescu", Gen.Feminin, 7);
             Teacher p2 = new Teacher("Popescu", Gen.Masculin, 8);
             Teacher p3 = new Teacher(p2);
@@ -378,6 +380,7 @@ namespace HighschoolClass
             Teacher p5 = new Teacher();
 
             Console.WriteLine("2) Adaugam cate doua materii fiecarui profesor");
+            Console.WriteLine("----------------------------------------------");
             p1.addSubject("Math");
             p1.addSubject("Physics");
 
@@ -394,6 +397,7 @@ namespace HighschoolClass
             p5.addSubject("Biology");
 
             Console.WriteLine("3) Setam senioritatile profesorilor");
+            Console.WriteLine("-----------------------------------");
             p1.settingSeniority(8);
             p2.settingSeniority(10);
             p3.settingSeniority(5);
@@ -416,11 +420,13 @@ namespace HighschoolClass
             Console.WriteLine("\n");
 
             Console.WriteLine("4) Comparam care dintre P2 si P5 este mai senior");
+            Console.WriteLine("------------------------------------------------");
             Console.WriteLine("\n");
             Console.WriteLine(p2.CompareTo(p5));
             Console.WriteLine("\n");
 
             Console.WriteLine("5) Adaugam cei 5 profesori intr-o lista");
+            Console.WriteLine("---------------------------------------");
             List<Teacher> listaProfesori = new List<Teacher>();
             listaProfesori.Add(p1);
             listaProfesori.Add(p2);
@@ -430,6 +436,7 @@ namespace HighschoolClass
             Console.WriteLine("\n");
 
             Console.WriteLine("6) Definim materii");
+            Console.WriteLine("------------------");
             Console.WriteLine("\n");
 
             SchoolSubject s1 = new SchoolSubject("Math");
@@ -441,6 +448,7 @@ namespace HighschoolClass
             SchoolSubject s7 = new SchoolSubject("German");
 
             Console.WriteLine("7) Alocam materiilor cate un profesor si validam daca acestia stiu sa le predea");
+            Console.WriteLine("-------------------------------------------------------------------------------");
             Console.WriteLine("\n");
 
             s1.setTeacherDeepCopy(p1);
@@ -502,6 +510,7 @@ namespace HighschoolClass
             Console.WriteLine("\n");
 
             Console.WriteLine("8) Modificam materia Math cu un alt profesor din lista care stie sa predea Math");
+            Console.WriteLine("-------------------------------------------------------------------------------");
             Console.WriteLine("\n");
             s1.setTeacherDeepCopy(p2);
             bool verificare8 = s1.validateTeacherSubject();
@@ -509,6 +518,7 @@ namespace HighschoolClass
             Console.WriteLine("\n");
 
             Console.WriteLine("9) Sortam profesorii din lista dupa senioritate");
+            Console.WriteLine("-----------------------------------------------");
             Console.WriteLine("\n");
             listaProfesori.Sort();
             foreach (Teacher element in listaProfesori)
@@ -518,6 +528,7 @@ namespace HighschoolClass
             Console.WriteLine("\n");
 
             Console.WriteLine("10) Definim SchoolSubject Romanian si cautam un profesor care poate sa o predea");
+            Console.WriteLine("-------------------------------------------------------------------------------");
             Console.WriteLine("\n");
             SchoolSubject s8 = new SchoolSubject("Romanian");
             Teacher p6 = new Teacher("Mihaescu", Gen.Feminin, 5);
@@ -540,6 +551,7 @@ namespace HighschoolClass
             Console.WriteLine("\n");
 
             Console.WriteLine("11) Definim materia English si ii alocam profesorul cu cea mai mare senioritate");
+            Console.WriteLine("-------------------------------------------------------------------------------");
             Console.WriteLine("\n");
             SchoolSubject s9 = new SchoolSubject("English");
             if(p3.getSeniority() > p4.getSeniority())
@@ -554,6 +566,8 @@ namespace HighschoolClass
             Console.WriteLine("\n");
 
             Console.WriteLine("12) Adaugam toate materiile intr-o lista");
+            Console.WriteLine("----------------------------------------");
+            Console.WriteLine("\n");
             List<SchoolSubject> listaMaterii = new List<SchoolSubject>();
             listaMaterii.Add(s1);
             listaMaterii.Add(s2);
@@ -564,12 +578,319 @@ namespace HighschoolClass
             listaMaterii.Add(s7);
             listaMaterii.Add(s8);
             listaMaterii.Add(s9);
+            /*foreach(SchoolSubject materie in listaMaterii)
+            {
+                Console.WriteLine(materie.ToString());
+            }*/
+            Console.WriteLine(listaMaterii.Count());
+            Console.WriteLine("\n");
+            
+
+            Console.WriteLine("13) Cream 5 studenti");
+            Console.WriteLine("--------------------");
             Console.WriteLine("\n");
 
+            DateTime dataNastereElev1 = new DateTime(1995, 10, 23);
+            Student e1 = new Student(10, "Alex", Gen.Masculin, dataNastereElev1);
+            Console.WriteLine(e1.ToString());
+            Console.WriteLine("\n");
 
+            DateTime dataNastereElev2 = new DateTime(1996, 11, 18);
+            Student e2 = new Student(10, "Costi", Gen.Masculin, dataNastereElev2);
+            Console.WriteLine(e2.ToString());
+            Console.WriteLine("\n");
 
+            DateTime dataNastereElev3 = new DateTime(1995, 5, 22);
+            Student e3 = new Student(10, "Ioana", Gen.Feminin, dataNastereElev3);
+            Console.WriteLine(e3.ToString());
+            Console.WriteLine("\n");
 
+            DateTime dataNastereElev4 = new DateTime(1996, 1, 30);
+            Student e4 = new Student(10, "Maria", Gen.Feminin, dataNastereElev4);
+            Console.WriteLine(e4.ToString());
+            Console.WriteLine("\n");
 
+            DateTime dataNastereElev5 = new DateTime(1996, 7, 14);
+            Student e5 = new Student(10, "Robert", Gen.Masculin, dataNastereElev5);
+            Console.WriteLine(e5.ToString());
+            Console.WriteLine("\n");
+
+            Console.WriteLine("14) Inscriem studentiii la materii");
+            Console.WriteLine("----------------------------------");
+            Console.WriteLine("\n");
+
+            //Elevul 1
+            e1.adaugareMaterie(s1);
+            e1.adaugareMaterie(s2);
+            e1.adaugareMaterie(s3);
+
+            //Elevul 2
+            e2.adaugareMaterie(s1);
+            e2.adaugareMaterie(s2);
+            e2.adaugareMaterie(s3);
+
+            //Elevul 3
+            e3.adaugareMaterie(s1);
+            e3.adaugareMaterie(s2);
+            e3.adaugareMaterie(s3);
+
+            //Elevul 4
+            e4.adaugareMaterie(s1);
+            e4.adaugareMaterie(s2);
+            e4.adaugareMaterie(s3);
+
+            //Elevul 5
+            e5.adaugareMaterie(s1);
+            e5.adaugareMaterie(s2);
+            e5.adaugareMaterie(s3);
+            Console.WriteLine("\n");
+
+            Console.WriteLine("15) Adaugam materii optionale studentilor");
+            Console.WriteLine("-----------------------------------------");
+            Console.WriteLine("\n");
+
+            //Materii optionale elev4: Muzica si Engleza
+            e4.adaugareMaterie(s5);
+            e4.adaugareMaterie(s9);
+
+            //Materiii optionale elev5: Engleza si Franceza
+            e5.adaugareMaterie(s9);
+            e5.adaugareMaterie(s6);
+
+            //Materie optionala elev2 si elev3: Chimie
+            e2.adaugareMaterie(s4);
+            e2.adaugareMaterie(s4);
+            Console.WriteLine("\n");
+
+            Console.WriteLine("16) Adaugam studentii intr-o lista");
+            Console.WriteLine("----------------------------------");
+            Console.WriteLine("\n");
+            List<Student> listaStudenti = new List<Student>();
+            listaStudenti.Add(e1);
+            listaStudenti.Add(e2);
+            listaStudenti.Add(e3);
+            listaStudenti.Add(e4);
+            listaStudenti.Add(e5);
+            /*foreach (Student student in listaStudenti)
+            {
+                Console.WriteLine(student);
+            }*/
+            Console.WriteLine(listaStudenti.Count());
+            Console.WriteLine("\n");
+
+            Console.WriteLine("17) Adaugam cate o nota la matematica fiecarui student");
+            Console.WriteLine("------------------------------------------------------");
+            Console.WriteLine("\n");
+            e1.adaugareNotaLaOMaterie(8, "Math");
+            e2.adaugareNotaLaOMaterie(10, "Math");
+            e3.adaugareNotaLaOMaterie(10, "Math");
+            e4.adaugareNotaLaOMaterie(5, "Math");
+            e5.adaugareNotaLaOMaterie(3, "Math");
+            Console.WriteLine("\n");
+
+            Console.WriteLine("18) Adaugam cate doua note la Fizica");
+            Console.WriteLine("------------------------------------");
+            Console.WriteLine("\n");
+
+            e1.adaugareNotaLaOMaterie(7, "Physics");
+            e1.adaugareNotaLaOMaterie(8, "Physics");
+
+            e2.adaugareNotaLaOMaterie(3, "Physics");
+            e2.adaugareNotaLaOMaterie(10, "Physics");
+
+            e3.adaugareNotaLaOMaterie(6, "Physics");
+            e3.adaugareNotaLaOMaterie(7, "Physics");
+
+            e4.adaugareNotaLaOMaterie(8, "Physics");
+            e4.adaugareNotaLaOMaterie(3, "Physics");
+
+            e5.adaugareNotaLaOMaterie(10, "Physics");
+            e5.adaugareNotaLaOMaterie(6, "Physics");
+            Console.WriteLine("\n");
+
+            Console.WriteLine("19) Incercam sa adaugam cate o nota la Muzica fiecarui student");
+            Console.WriteLine("--------------------------------------------------------------");
+            Console.WriteLine("\n");
+
+            //Verificam daca elevul1 a fost inscris la materia Muzica
+            try
+            {
+                e1.adaugareNotaLaOMaterie(7, "Music");
+            }
+            catch(SubjectNotFoundException ex)
+            {
+                Console.WriteLine("Elevul1 nu este inscris la materia Muzica: " + ex.Message);
+            }
+            Console.WriteLine("\n");
+
+            //Verificam daca elevul2 a fost inscris la materia Muzica
+            try
+            {
+                e2.adaugareNotaLaOMaterie(8, "Music");
+            }
+            catch (SubjectNotFoundException ex)
+            {
+                Console.WriteLine("Elevul2 nu este inscris la materia Muzica: " + ex.Message);
+            }
+            Console.WriteLine("\n");
+
+            //Verificam daca elevul3 a fost inscris la materia Muzica
+            try
+            {
+                e3.adaugareNotaLaOMaterie(5, "Music");
+            }
+            catch (SubjectNotFoundException ex)
+            {
+                Console.WriteLine("Elevul3 nu este inscris la materia Muzica: " + ex.Message);
+            }
+            Console.WriteLine("\n");
+
+            //Verificam daca elevul4 a fost inscris la materia Muzica
+            try
+            {
+                e4.adaugareNotaLaOMaterie(10, "Music");
+                Console.WriteLine(e4.ToString());
+            }
+            catch (SubjectNotFoundException ex)
+            {
+                Console.WriteLine("Elevul4 nu este inscris la materia Muzica: " + ex.Message);
+            }
+            Console.WriteLine("\n");
+
+            //Verificam daca elevul5 a fost inscris la materiia Muzica
+            try
+            {
+                e5.adaugareNotaLaOMaterie(3, "Music");
+            }
+            catch (SubjectNotFoundException ex)
+            {
+                Console.WriteLine("Elevul5 nu este inscris la materia Muzica: " + ex.Message);
+            }
+            Console.WriteLine("\n");
+
+            Console.WriteLine("20) Adaugam 3 note fiecarui student la Biologie");
+            Console.WriteLine("-----------------------------------------------");
+            Console.WriteLine("\n");
+
+            //Adaugam note studentului1
+            e1.adaugareNotaLaOMaterie(5, "Biology");
+            e1.adaugareNotaLaOMaterie(8, "Biology");
+            e1.adaugareNotaLaOMaterie(7, "Biology");
+
+            //Adaugam note studentului2
+            e2.adaugareNotaLaOMaterie(10, "Biology");
+            e2.adaugareNotaLaOMaterie(10, "Biology");
+            e2.adaugareNotaLaOMaterie(10, "Biology");
+
+            //Adaugam note studentului3
+            e3.adaugareNotaLaOMaterie(9, "Biology");
+            e3.adaugareNotaLaOMaterie(9, "Biology");
+            e3.adaugareNotaLaOMaterie(9, "Biology");
+
+            //Adaugam note studentului4
+            e4.adaugareNotaLaOMaterie(8, "Biology");
+            e4.adaugareNotaLaOMaterie(8, "Biology");
+            e4.adaugareNotaLaOMaterie(5, "Biology");
+
+            //Adaugam note studentului5
+            e5.adaugareNotaLaOMaterie(3, "Biology");
+            e5.adaugareNotaLaOMaterie(4, "Biology");
+            e5.adaugareNotaLaOMaterie(5, "Biology");
+            Console.WriteLine("\n");
+
+            Console.WriteLine("21) Adaugam nota 11 studentului5 la Engleza");
+            Console.WriteLine("-------------------------------------------");
+            Console.WriteLine("\n");
+
+            try
+            {
+                e5.adaugareNotaLaOMaterie(11, "English");
+            }
+            catch(ArgumentOutOfRangeException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            Console.WriteLine("\n");
+
+            Console.WriteLine("22) Afisam media fiecarei materii pentru studentul5");
+            Console.WriteLine("---------------------------------------------------");
+            Console.WriteLine("\n");
+
+            //Media studentului5 la materia Math
+            double medieE5Math;
+            medieE5Math = e5.medieNoteLaOAnumitaMaterie("Math");
+            Console.WriteLine("Matematica: " + medieE5Math);
+            Console.WriteLine("\n");
+
+            //Media studentului5 la materia Physics
+            double medieE5Physics;
+            medieE5Physics = e5.medieNoteLaOAnumitaMaterie("Physics");
+            Console.WriteLine("Physics: " + medieE5Physics);
+            Console.WriteLine("\n");
+
+            //Media studentului5 la materia Biology
+            double medieE5Biology;
+            medieE5Biology = e5.medieNoteLaOAnumitaMaterie("Biology");
+            Console.WriteLine("Biology: " + medieE5Biology);
+            Console.WriteLine("\n");
+
+            //Media studentului5 la materia English (incercare)
+            double medieE5English;
+            try
+            {
+                medieE5English = e5.medieNoteLaOAnumitaMaterie("English");
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("English: " + ex.Message);
+            }
+            Console.WriteLine("\n");
+
+            //Media studentului5 la materia French (incercare)
+            double medieE5French;
+            try
+            {
+                medieE5French = e5.medieNoteLaOAnumitaMaterie("French");
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("French: " + ex.Message);
+            }
+            Console.WriteLine("\n");
+
+            //Media studentului5 la materia Music (incercare)
+            double medieE5Music;
+            try
+            {
+                medieE5Music = e5.medieNoteLaOAnumitaMaterie("Music");
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Music: " + ex.Message);
+            }
+            Console.WriteLine("\n");
+
+            Console.WriteLine("23) Adaugam cate 2 note elevilor 2 si 3 la materia Chemistry");
+            Console.WriteLine("------------------------------------------------------------");
+            Console.WriteLine("\n");
+
+            //Pentru elevul2
+            e2.adaugareNotaLaOMaterie(3, "Chemistry");
+            e2.adaugareNotaLaOMaterie(6, "Chemistry");
+
+            //Pentru elevul3
+            e3.adaugareNotaLaOMaterie(10, "Chemistry");
+            e3.adaugareNotaLaOMaterie(9, "Chemistry");
+            Console.WriteLine("\n");
+
+            Console.WriteLine("24) Afisam media generala a fiecarui student");
+            Console.WriteLine("--------------------------------------------");
+            Console.WriteLine("\n");
+
+            //Media generala a studentului1
+            double medieGeneralaE1;
+            medieGeneralaE1 = e1.CalculateGrade();
+            Console.WriteLine("Media generala a elevului1: " + medieGeneralaE1);
 
 
 

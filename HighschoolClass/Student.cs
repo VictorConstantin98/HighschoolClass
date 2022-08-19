@@ -91,7 +91,7 @@ namespace HighschoolClass
             }
             if(aux!=true)
             {
-                //De aruncat o exceptie custom
+                throw new Exception("Studentul nu este inscris la materia respectiva, prin urmare nu se poate calcula o medie. Incercati la alta materie.");
             }
             return media;
         }
