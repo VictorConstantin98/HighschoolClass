@@ -422,7 +422,8 @@ namespace HighschoolClass
             Console.WriteLine("4) Comparam care dintre P2 si P5 este mai senior");
             Console.WriteLine("------------------------------------------------");
             Console.WriteLine("\n");
-            Console.WriteLine(p2.CompareTo(p5));
+            Console.WriteLine(p2.CompareTo(p5)); //Sa imi afiseze la ecran profesorul mai senior
+                                                 //si care va preda
             Console.WriteLine("\n");
 
             Console.WriteLine("5) Adaugam cei 5 profesori intr-o lista");
@@ -450,6 +451,8 @@ namespace HighschoolClass
             Console.WriteLine("7) Alocam materiilor cate un profesor si validam daca acestia stiu sa le predea");
             Console.WriteLine("-------------------------------------------------------------------------------");
             Console.WriteLine("\n");
+
+            //De facut cu lista de profesorii (nu stim cati profesori cate materii)
 
             s1.setTeacherDeepCopy(p1);
             bool verificare1 = s1.validateTeacherSubject();
@@ -512,6 +515,7 @@ namespace HighschoolClass
             Console.WriteLine("8) Modificam materia Math cu un alt profesor din lista care stie sa predea Math");
             Console.WriteLine("-------------------------------------------------------------------------------");
             Console.WriteLine("\n");
+            //De cautat un alt profesor decat cel care a plecat in concendiu
             s1.setTeacherDeepCopy(p2);
             bool verificare8 = s1.validateTeacherSubject();
             Console.WriteLine("Profesorul2 cu materia Math" + " > " + verificare8);
@@ -531,11 +535,12 @@ namespace HighschoolClass
             Console.WriteLine("-------------------------------------------------------------------------------");
             Console.WriteLine("\n");
             SchoolSubject s8 = new SchoolSubject("Romanian");
+            //De cautat daca un profesor din lista stie Romana
             Teacher p6 = new Teacher("Mihaescu", Gen.Feminin, 5);
             Console.WriteLine("Profesorul " + p6.getName() + " a fost angajat sa predea " + s8.getNume());
             Console.WriteLine("\n");
 
-            foreach (Teacher element in listaProfesori)
+            foreach (Teacher element in listaProfesori) //De refacut
             {
                 if(listaProfesori.Contains(p6))
                 {
@@ -553,10 +558,13 @@ namespace HighschoolClass
             Console.WriteLine("11) Definim materia English si ii alocam profesorul cu cea mai mare senioritate");
             Console.WriteLine("-------------------------------------------------------------------------------");
             Console.WriteLine("\n");
+
+            //De refacut. De cautat profesorul care are cea mai mare senioritate si stie sa predea engleza din lista.
+              //In conditiile in care nu stiu ca p3 si p4 stiu sa predea Engleza
             SchoolSubject s9 = new SchoolSubject("English");
             if(p3.getSeniority() > p4.getSeniority())
             {
-                throw new Exception("Profesorul 3 are senioritatea mai mica decat profesorul 4 si nu stie sa predea Engleza");
+                throw new Exception("Profesorul 3 are senioritatea mai mare decat profesorul 4 si nu stie sa predea Engleza");
             }
             else
             {
@@ -681,6 +689,11 @@ namespace HighschoolClass
             Console.WriteLine("17) Adaugam cate o nota la matematica fiecarui student");
             Console.WriteLine("------------------------------------------------------");
             Console.WriteLine("\n");
+            //De adaugat cu ajutorul listei
+            foreach(Student elev in listaStudenti)
+            {
+                elev.adaugareNotaLaOMaterie(8, "Math");
+            }
             e1.adaugareNotaLaOMaterie(8, "Math");
             e2.adaugareNotaLaOMaterie(10, "Math");
             e3.adaugareNotaLaOMaterie(10, "Math");
