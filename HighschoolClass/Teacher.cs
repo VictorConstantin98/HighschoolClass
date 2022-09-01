@@ -156,6 +156,23 @@ namespace HighschoolClass
             return 0;
         }
 
-        
+        //Override Equals
+        public override bool Equals(object? obj)
+        {
+            try
+            {
+                if(this.name == ((Teacher)obj).name && this.dataNasterii == ((Teacher)obj).dataNasterii)
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch(InvalidCastException ex)
+            {
+                return false;
+            }
+        }
+
+
     }
 }

@@ -424,6 +424,25 @@ namespace HighschoolClass
             Console.WriteLine("\n");
             Console.WriteLine(p2.CompareTo(p5)); //Sa imi afiseze la ecran profesorul mai senior
                                                  //si care va preda
+
+            if(p2.CompareTo(p5) > 0)
+            {
+                Console.WriteLine(p2.ToString() + "\n\n" + "Profesorul 2 este mai senior");
+            }
+            else
+            {
+                if(p2.CompareTo(p5) == 0)
+                {
+                    Console.WriteLine("Profesorul 2 are aceeasi senioritate ca profesorul 5");
+                }
+                else
+                {
+                    if(p2.CompareTo(p5) < 0)
+                    {
+                        Console.WriteLine(p5.ToString() + "\n\n" + "Profesorul 5 este mai senior");
+                    }
+                }
+            }
             Console.WriteLine("\n");
 
             Console.WriteLine("5) Adaugam cei 5 profesori intr-o lista");
@@ -454,61 +473,49 @@ namespace HighschoolClass
 
             //De facut cu lista de profesorii (nu stim cati profesori cate materii)
 
+
+            p4.setName("Georgescu");
+            p5.setName("Alexandrescu");
+
             s1.setTeacherDeepCopy(p1);
-            bool verificare1 = s1.validateTeacherSubject();
-            Console.WriteLine("Math cu profesorul1" + " > " + verificare1);
-
             s2.setTeacherDeepCopy(p2);
-            bool verificare2;
-            try
-            {
-                verificare2 = s2.validateTeacherSubject();
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine("Physics cu profesorul2" + " > " + ex.Message);
-            }
+            s3.setTeacherDeepCopy(p3);
+            s4.setTeacherDeepCopy(p4);
+            s5.setTeacherDeepCopy(p5);
+            s6.setTeacherDeepCopy(p3);
+            s7.setTeacherDeepCopy(p4);
 
-            s3.setTeacherDeepCopy(p2);
-            bool verificare3 = s3.validateTeacherSubject();
-            Console.WriteLine("Biology cu profesorul3" + " > " + verificare3);
+            //listaProfesori.ForEach(a => Console.WriteLine(a.ToString()));
 
-            s4.setTeacherDeepCopy(p3);
-            bool verificare4;
-            try
+            foreach (Teacher profesor in listaProfesori)
             {
-                verificare4 = s4.validateTeacherSubject();
+                if(profesor.validateSchoolSubject(s1.getNume()))
+                {
+                    s1.setTeacher(profesor);
+                }
+                if(profesor.validateSchoolSubject(s2.getNume()))
+                {
+                    s2.setTeacher(profesor);
+                }
             }
-            catch(Exception ex)
-            {
-                Console.WriteLine("Chemistry cu profesorul3" + " > " + ex.Message);
-            }
+            List<SchoolSubject> listaMaterii = new List<SchoolSubject>();
+            listaMaterii.Add(s1);
+            listaMaterii.Add(s2);
+            listaMaterii.Add(s3);
+            listaMaterii.Add(s4);
+            listaMaterii.Add(s5);
+            listaMaterii.Add(s6);
+            listaMaterii.Add(s7);
 
-            s5.setTeacherDeepCopy(p4);
-            bool verificare5;
-            try
+            foreach(SchoolSubject materie in listaMaterii)
             {
-                verificare5 = s5.validateTeacherSubject();
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine("Music cu profesorul4" + " > " + ex.Message);
-            }
-
-            s6.setTeacherDeepCopy(p4);
-            bool verificare6 = s6.validateTeacherSubject();
-            Console.WriteLine("French cu profesorul4" + " > " + verificare6);
-
-
-            s7.setTeacherDeepCopy(p5);
-            bool verificare7;
-            try
-            {
-                verificare7 = s7.validateTeacherSubject();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("German cu profesorul5" + " > " + ex.Message);
+                foreach(Teacher profesor in listaProfesori)
+                {
+                    if(profesor.validateSchoolSubject(materie.getNume()))
+                    {
+                        materie.setTeacher(profesor);
+                    }
+                }
             }
             Console.WriteLine("\n");
 
@@ -516,7 +523,20 @@ namespace HighschoolClass
             Console.WriteLine("-------------------------------------------------------------------------------");
             Console.WriteLine("\n");
             //De cautat un alt profesor decat cel care a plecat in concendiu
-            s1.setTeacherDeepCopy(p2);
+            Teacher teacherConcediu = s1.getTeacher();
+            foreach(Teacher profesor in listaProfesori)
+            {
+                if(profesor.validateSchoolSubject(s1.getNume()))
+                {
+                    if(!profesor.Equals(teacherConcediu))
+                    {
+                        s1.setTeacher(profesor);
+                    }
+                }
+            }
+            //De suprascris Equals in Teacher
+            //De facut clasa Scoala
+
             bool verificare8 = s1.validateTeacherSubject();
             Console.WriteLine("Profesorul2 cu materia Math" + " > " + verificare8);
             Console.WriteLine("\n");
@@ -540,18 +560,23 @@ namespace HighschoolClass
             Console.WriteLine("Profesorul " + p6.getName() + " a fost angajat sa predea " + s8.getNume());
             Console.WriteLine("\n");
 
-            foreach (Teacher element in listaProfesori) //De refacut
+            bool auxVerificare = false;
+            foreach (Teacher profesor in listaProfesori) //De refacut
             {
-                if(listaProfesori.Contains(p6))
+                if(profesor.validateSchoolSubject(s8.getNume()))
                 {
-                    throw new Exception("Nu s-a gasit niciun profesor care sa predea materia Romana. Anagajati unul!");
-                }
-                else
-                {
-                    s8.setTeacherDeepCopy(p6);
+                    s8.setTeacher(profesor);
+                    auxVerificare = true;
+                    break;
                 }
             }
-            listaProfesori.Add(p6);
+            
+            if(auxVerificare == false)
+            {
+                s8.setTeacher(p6);
+                listaProfesori.Add(p6);
+            }
+            
             Console.WriteLine(s8.ToString());
             Console.WriteLine("\n");
 
@@ -559,7 +584,7 @@ namespace HighschoolClass
             Console.WriteLine("-------------------------------------------------------------------------------");
             Console.WriteLine("\n");
 
-            //De refacut. De cautat profesorul care are cea mai mare senioritate si stie sa predea engleza din lista.
+            //De refacut. De cautat profesorul care are cea mai mare senioritate si stie sa predea engleza din lista. -- TO DO
               //In conditiile in care nu stiu ca p3 si p4 stiu sa predea Engleza
             SchoolSubject s9 = new SchoolSubject("English");
             if(p3.getSeniority() > p4.getSeniority())
@@ -576,7 +601,7 @@ namespace HighschoolClass
             Console.WriteLine("12) Adaugam toate materiile intr-o lista");
             Console.WriteLine("----------------------------------------");
             Console.WriteLine("\n");
-            List<SchoolSubject> listaMaterii = new List<SchoolSubject>();
+            listaMaterii = new List<SchoolSubject>();
             listaMaterii.Add(s1);
             listaMaterii.Add(s2);
             listaMaterii.Add(s3);
@@ -887,14 +912,14 @@ namespace HighschoolClass
             Console.WriteLine("------------------------------------------------------------");
             Console.WriteLine("\n");
 
-            //Pentru elevul2
+            /*//Pentru elevul2
             e2.adaugareNotaLaOMaterie(3, "Chemistry");
             e2.adaugareNotaLaOMaterie(6, "Chemistry");
 
             //Pentru elevul3
             e3.adaugareNotaLaOMaterie(10, "Chemistry");
             e3.adaugareNotaLaOMaterie(9, "Chemistry");
-            Console.WriteLine("\n");
+            Console.WriteLine("\n");*/
 
             Console.WriteLine("24) Afisam media generala a fiecarui student");
             Console.WriteLine("--------------------------------------------");
