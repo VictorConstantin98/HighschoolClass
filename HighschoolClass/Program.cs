@@ -514,6 +514,11 @@ namespace HighschoolClass
                     if(profesor.validateSchoolSubject(materie.getNume()))
                     {
                         materie.setTeacher(profesor);
+                        Console.WriteLine("Profesorul " + profesor.getName() + " stie sa predea materia " + materie.getNume() + "\n");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Profesorul " + profesor.getName() + " nu stie sa predea materia " + materie.getNume() + "\n");
                     }
                 }
             }
@@ -524,6 +529,7 @@ namespace HighschoolClass
             Console.WriteLine("\n");
             //De cautat un alt profesor decat cel care a plecat in concendiu
             Teacher teacherConcediu = s1.getTeacher();
+            teacherConcediu.setName("Popescu");
             foreach(Teacher profesor in listaProfesori)
             {
                 if(profesor.validateSchoolSubject(s1.getNume()))
@@ -531,14 +537,10 @@ namespace HighschoolClass
                     if(!profesor.Equals(teacherConcediu))
                     {
                         s1.setTeacher(profesor);
+                        Console.WriteLine("Profesorul " + teacherConcediu.getName() + " a plecat in concediu, iar materia " + s1.getNume() + " o preda acum profesorul " + profesor.getName());
                     }
                 }
             }
-            //De suprascris Equals in Teacher
-            //De facut clasa Scoala
-
-            bool verificare8 = s1.validateTeacherSubject();
-            Console.WriteLine("Profesorul2 cu materia Math" + " > " + verificare8);
             Console.WriteLine("\n");
 
             Console.WriteLine("9) Sortam profesorii din lista dupa senioritate");
@@ -557,16 +559,16 @@ namespace HighschoolClass
             SchoolSubject s8 = new SchoolSubject("Romanian");
             //De cautat daca un profesor din lista stie Romana
             Teacher p6 = new Teacher("Mihaescu", Gen.Feminin, 5);
-            Console.WriteLine("Profesorul " + p6.getName() + " a fost angajat sa predea " + s8.getNume());
             Console.WriteLine("\n");
 
             bool auxVerificare = false;
-            foreach (Teacher profesor in listaProfesori) //De refacut
+            foreach (Teacher profesor in listaProfesori)
             {
                 if(profesor.validateSchoolSubject(s8.getNume()))
                 {
                     s8.setTeacher(profesor);
                     auxVerificare = true;
+                    Console.WriteLine("Niciun profesor din lista nu stie sa predea materia " + s8.getNume());
                     break;
                 }
             }
@@ -575,9 +577,8 @@ namespace HighschoolClass
             {
                 s8.setTeacher(p6);
                 listaProfesori.Add(p6);
+                Console.WriteLine("Profesorul " + p6.getName() + " a fost angajat sa predea materia " + s8.getNume() + "\n");
             }
-            
-            Console.WriteLine(s8.ToString());
             Console.WriteLine("\n");
 
             Console.WriteLine("11) Definim materia English si ii alocam profesorul cu cea mai mare senioritate");
@@ -587,15 +588,13 @@ namespace HighschoolClass
             //De refacut. De cautat profesorul care are cea mai mare senioritate si stie sa predea engleza din lista. -- TO DO
               //In conditiile in care nu stiu ca p3 si p4 stiu sa predea Engleza
             SchoolSubject s9 = new SchoolSubject("English");
-            if(p3.getSeniority() > p4.getSeniority())
+
+            bool auxVerificare2 = false;
+            foreach(Teacher profesor in listaProfesori)
             {
-                throw new Exception("Profesorul 3 are senioritatea mai mare decat profesorul 4 si nu stie sa predea Engleza");
+                
             }
-            else
-            {
-                s9.setTeacherDeepCopy(p4);
-            }
-            Console.WriteLine(s9.ToString());
+
             Console.WriteLine("\n");
 
             Console.WriteLine("12) Adaugam toate materiile intr-o lista");
