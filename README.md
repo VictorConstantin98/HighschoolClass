@@ -78,6 +78,7 @@ Se va realiza la Program urmatoarele utilizand metodele curente.
 29. In Class School sa se realizeze o metoda care da o nota unui elev la o anumita materie (parametrii de intrare ar fi numele elevului, materia si nota). Metoda trebuie sa caute elevul sa-i puna nota la respectiva materie;
 30. In Class School sa se realizeze o metoda ce intoarce media generala a unui elev dat (parametru numele elevului)
 31. In Class School sa se realizeze o metoda ce intoarce elevul cu cea mai mare medie. 
+	(Optional: Sa se implementeze din metodele (cerintele) facute in program in School; Eg; Sa stearga un profesor si atunci sa se realoce un alt profesor; Sa se aloce un profesor cu cea mai mare senioritate; Sa se promoveze clasa, etc.)
 
 32. Sa se comenteze tot programul din main si sa se realizeze o structura repetitiva infinit de tip consola ce asteapta de la utilizator instructiuni; (Sa se caute pe net cum scri de la tastatura)
 		In structura repetitiva de tip consola utilizatorul poate sa faca urmatoarele lucruri in functie de ce comanda da: 
@@ -94,7 +95,10 @@ Se va realiza la Program urmatoarele utilizand metodele curente.
 			9. Sa vizualizezi toti elevii din scoala impreuna cu notele si materiile lor; 
 			10. Sa vizualizeze media generala a unui elev;
 			11. Sa vizualizeze elevul premiant (elevul cu cea mai mare medie); 
-			12. Sa iasa din programul consola cu o anumita comanda (sa iasa din loop cu o comanda); 
+			12. Sa iasa din programul consola cu o anumita comanda (sa iasa din loop cu o comanda);
+					(Optional sa se implementeze alte metode la liber din toate celelalte cerinte; Eg; Sa se stearga un profesor dat, sa evalueze un elev daca trece clasa; Sa plece un profesor in concediu; Sa se stearga un elev; etc. Sa se evalueaze toti elevii, etc.)
+					
+				
 
 
 			
