@@ -73,3 +73,29 @@ Se va realiza la Program urmatoarele utilizand metodele curente.
 26. Sa se sorteze studentii in lista dupa nota generala.
 
  
+27. In Clasa School sa se realizez: La adaugrea unei materii in lista sa se valideze ca exista si profesor asignat materiei (nu e null profesul din School Subject) si ca acesta se afla in lista de profesori. 
+28. In Class School sa se realizeze metoda de inscriere a unei elev la o materie din lista pe baza numelui materiei
+29. In Class School sa se realizeze o metoda care da o nota unui elev la o anumita materie (parametrii de intrare ar fi numele elevului, materia si nota). Metoda trebuie sa caute elevul sa-i puna nota la respectiva materie;
+30. In Class School sa se realizeze o metoda ce intoarce media generala a unui elev dat (parametru numele elevului)
+31. In Class School sa se realizeze o metoda ce intoarce elevul cu cea mai mare medie. 
+
+32. Sa se comenteze tot programul din main si sa se realizeze o structura repetitiva infinit de tip consola ce asteapta de la utilizator instructiuni; (Sa se caute pe net cum scri de la tastatura)
+		In structura repetitiva de tip consola utilizatorul poate sa faca urmatoarele lucruri in functie de ce comanda da: 
+			1. Sa se afiseze un Help cu ce instructiuni poate da catre calculator; 
+			2. Sa se adauge un Profesor in scoala; 
+			3. Sa modifice materiile cunoscute de un anumit profesor ( sa adauge o noua materie pe care un profesor o poate preda)
+			4. Sa modifice numele unui profesor din lista. 
+			5. Sa vizualizezei la ecran toti profesorii inscrisi in scoala impreuna cu toate datele lor;
+			6. Sa adauge o materie in scoala (alocand si un profesor din cei inscrisi in scoala);  
+			7. Sa vizualizezi la ecran toate materiile din scoala impreuna cu toate datele lor;
+			6. Sa adauge un elev in scoala; 
+			7. Sa inscrie un elev la o materie din scoala;
+			8. Sa ii dea note unui elev la o anumita materie;
+			9. Sa vizualizezi toti elevii din scoala impreuna cu notele si materiile lor; 
+			10. Sa vizualizeze media generala a unui elev;
+			11. Sa vizualizeze elevul premiant (elevul cu cea mai mare medie); 
+			12. Sa iasa din programul consola cu o anumita comanda (sa iasa din loop cu o comanda); 
+
+
+			
+	
