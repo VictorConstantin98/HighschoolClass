@@ -557,6 +557,7 @@ namespace HighschoolClass
             Console.WriteLine("-------------------------------------------------------------------------------");
             Console.WriteLine("\n");
             SchoolSubject s8 = new SchoolSubject("Romanian");
+            listaMaterii.Add(s8);
             //De cautat daca un profesor din lista stie Romana
             Teacher p6 = new Teacher("Mihaescu", Gen.Feminin, 5);
             Console.WriteLine("\n");
@@ -588,18 +589,17 @@ namespace HighschoolClass
             //De refacut. De cautat profesorul care are cea mai mare senioritate si stie sa predea engleza din lista. -- TO DO
               //In conditiile in care nu stiu ca p3 si p4 stiu sa predea Engleza
             SchoolSubject s9 = new SchoolSubject("English");
-            listaMaterii.Add(s8);
             listaMaterii.Add(s9);
-            listaMaterii.ForEach(materie => Console.WriteLine(materie.getNume().ToString()));
 
+            var maxSeniority = listaProfesori.Max(p => p.getSeniority());
             foreach(Teacher profesor in listaProfesori)
             {
-                if(profesor.validateSchoolSubject(s9.getNume()))
+                if(profesor.getSeniority() == maxSeniority)
                 {
-                    if(profesor.getSeniority() == 10)
+                    if(profesor.validateSchoolSubject(s9.getNume()))
                     {
                         s9.setTeacher(profesor);
-                        Console.WriteLine("Profesorul " + profesor.getName() + " are senioritatea " + profesor.getSeniority() + " si preda materia " + s9.getNume());
+                        Console.WriteLine("Profesorul " + profesor.getName() + " cu senioritatea " + profesor.getSeniority() + " preda materia " + s9.getNume());
                     }
                 }
             }
