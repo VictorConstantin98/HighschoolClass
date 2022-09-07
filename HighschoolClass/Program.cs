@@ -656,31 +656,22 @@ namespace HighschoolClass
             Console.WriteLine("----------------------------------");
             Console.WriteLine("\n");
 
-            //Elevul 1
-            e1.adaugareMaterie(s1);
-            e1.adaugareMaterie(s2);
-            e1.adaugareMaterie(s3);
+            List<Student> listaStudenti = new List<Student>();
+            listaStudenti.Add(e1);
+            listaStudenti.Add(e2);
+            listaStudenti.Add(e3);
+            listaStudenti.Add(e4);
+            listaStudenti.Add(e5);
 
-            //Elevul 2
-            e2.adaugareMaterie(s1);
-            e2.adaugareMaterie(s2);
-            e2.adaugareMaterie(s3);
-
-            //Elevul 3
-            e3.adaugareMaterie(s1);
-            e3.adaugareMaterie(s2);
-            e3.adaugareMaterie(s3);
-
-            //Elevul 4
-            e4.adaugareMaterie(s1);
-            e4.adaugareMaterie(s2);
-            e4.adaugareMaterie(s3);
-
-            //Elevul 5
-            e5.adaugareMaterie(s1);
-            e5.adaugareMaterie(s2);
-            e5.adaugareMaterie(s3);
+            foreach(Student student in listaStudenti)
+            {
+                student.adaugareMaterie(s1);
+                student.adaugareMaterie(s2);
+                student.adaugareMaterie(s3);
+                Console.WriteLine(student.getName() + " > " + s1.getNume() + " " + s2.getNume() + " " + s3.getNume());
+            }
             Console.WriteLine("\n");
+
 
             Console.WriteLine("15) Adaugam materii optionale studentilor");
             Console.WriteLine("-----------------------------------------");
@@ -702,17 +693,13 @@ namespace HighschoolClass
             Console.WriteLine("16) Adaugam studentii intr-o lista");
             Console.WriteLine("----------------------------------");
             Console.WriteLine("\n");
-            List<Student> listaStudenti = new List<Student>();
+            /*List<Student> listaStudenti = new List<Student>();
             listaStudenti.Add(e1);
             listaStudenti.Add(e2);
             listaStudenti.Add(e3);
             listaStudenti.Add(e4);
             listaStudenti.Add(e5);
-            /*foreach (Student student in listaStudenti)
-            {
-                Console.WriteLine(student);
-            }*/
-            Console.WriteLine(listaStudenti.Count());
+            Console.WriteLine(listaStudenti.Count());*/
             Console.WriteLine("\n");
 
             Console.WriteLine("17) Adaugam cate o nota la matematica fiecarui student");
