@@ -688,7 +688,6 @@ namespace HighschoolClass
             //Materie optionala elev2 si elev3: Chimie
             e2.adaugareMaterie(s4);
             e2.adaugareMaterie(s4);
-            Console.WriteLine("\n");
 
             Console.WriteLine("16) Adaugam studentii intr-o lista");
             Console.WriteLine("----------------------------------");
@@ -710,16 +709,19 @@ namespace HighschoolClass
             {
                 elev.adaugareNotaLaOMaterie(8, "Math");
             }
-            e1.adaugareNotaLaOMaterie(8, "Math");
-            e2.adaugareNotaLaOMaterie(10, "Math");
-            e3.adaugareNotaLaOMaterie(10, "Math");
-            e4.adaugareNotaLaOMaterie(5, "Math");
-            e5.adaugareNotaLaOMaterie(3, "Math");
             Console.WriteLine("\n");
 
             Console.WriteLine("18) Adaugam cate doua note la Fizica");
             Console.WriteLine("------------------------------------");
             Console.WriteLine("\n");
+
+             //Adaugam 8 si 5 la Fizica fiecarui student din lista
+
+            /*foreach(Student elev in listaStudenti)
+            {
+                elev.adaugareNotaLaOMaterie(8, "Physics");
+                elev.adaugareNotaLaOMaterie(5, "Physics");
+            }*/
 
             e1.adaugareNotaLaOMaterie(7, "Physics");
             e1.adaugareNotaLaOMaterie(8, "Physics");
