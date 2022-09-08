@@ -743,59 +743,17 @@ namespace HighschoolClass
             Console.WriteLine("--------------------------------------------------------------");
             Console.WriteLine("\n");
 
-            //Verificam daca elevul1 a fost inscris la materia Muzica
-            try
+            foreach(Student student in listaStudenti)
             {
-                e1.adaugareNotaLaOMaterie(7, "Music");
-            }
-            catch(SubjectNotFoundException ex)
-            {
-                Console.WriteLine("Elevul1 nu este inscris la materia Muzica: " + ex.Message);
-            }
-            Console.WriteLine("\n");
-
-            //Verificam daca elevul2 a fost inscris la materia Muzica
-            try
-            {
-                e2.adaugareNotaLaOMaterie(8, "Music");
-            }
-            catch (SubjectNotFoundException ex)
-            {
-                Console.WriteLine("Elevul2 nu este inscris la materia Muzica: " + ex.Message);
-            }
-            Console.WriteLine("\n");
-
-            //Verificam daca elevul3 a fost inscris la materia Muzica
-            try
-            {
-                e3.adaugareNotaLaOMaterie(5, "Music");
-            }
-            catch (SubjectNotFoundException ex)
-            {
-                Console.WriteLine("Elevul3 nu este inscris la materia Muzica: " + ex.Message);
-            }
-            Console.WriteLine("\n");
-
-            //Verificam daca elevul4 a fost inscris la materia Muzica
-            try
-            {
-                e4.adaugareNotaLaOMaterie(10, "Music");
-                Console.WriteLine(e4.ToString());
-            }
-            catch (SubjectNotFoundException ex)
-            {
-                Console.WriteLine("Elevul4 nu este inscris la materia Muzica: " + ex.Message);
-            }
-            Console.WriteLine("\n");
-
-            //Verificam daca elevul5 a fost inscris la materiia Muzica
-            try
-            {
-                e5.adaugareNotaLaOMaterie(3, "Music");
-            }
-            catch (SubjectNotFoundException ex)
-            {
-                Console.WriteLine("Elevul5 nu este inscris la materia Muzica: " + ex.Message);
+                try
+                {
+                    student.adaugareNotaLaOMaterie(8, s5.getNume());
+                    Console.WriteLine("Elevul " + student.getName() + " a fost inscris la materia " + s5.getNume() + " si are nota 8.");
+                }
+                catch(SubjectNotFoundException ex)
+                {
+                    Console.WriteLine("Elevul " + student.getName() + " nu a fost inscris la materia " + s5.getNume() + ": " + ex.Message);
+                }
             }
             Console.WriteLine("\n");
 
