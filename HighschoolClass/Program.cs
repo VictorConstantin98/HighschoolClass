@@ -760,31 +760,14 @@ namespace HighschoolClass
             Console.WriteLine("20) Adaugam 3 note fiecarui student la Biologie");
             Console.WriteLine("-----------------------------------------------");
             Console.WriteLine("\n");
-
-            //Adaugam note studentului1
-            e1.adaugareNotaLaOMaterie(5, "Biology");
-            e1.adaugareNotaLaOMaterie(8, "Biology");
-            e1.adaugareNotaLaOMaterie(7, "Biology");
-
-            //Adaugam note studentului2
-            e2.adaugareNotaLaOMaterie(10, "Biology");
-            e2.adaugareNotaLaOMaterie(10, "Biology");
-            e2.adaugareNotaLaOMaterie(10, "Biology");
-
-            //Adaugam note studentului3
-            e3.adaugareNotaLaOMaterie(9, "Biology");
-            e3.adaugareNotaLaOMaterie(9, "Biology");
-            e3.adaugareNotaLaOMaterie(9, "Biology");
-
-            //Adaugam note studentului4
-            e4.adaugareNotaLaOMaterie(8, "Biology");
-            e4.adaugareNotaLaOMaterie(8, "Biology");
-            e4.adaugareNotaLaOMaterie(5, "Biology");
-
-            //Adaugam note studentului5
-            e5.adaugareNotaLaOMaterie(3, "Biology");
-            e5.adaugareNotaLaOMaterie(4, "Biology");
-            e5.adaugareNotaLaOMaterie(5, "Biology");
+            
+            foreach(Student student in listaStudenti)
+            {
+                student.adaugareNotaLaOMaterie(5, s3.getNume());
+                student.adaugareNotaLaOMaterie(8, s3.getNume());
+                student.adaugareNotaLaOMaterie(10, s3.getNume());
+                Console.WriteLine("Studentul " + student.getName() + " are notele 5, 8 si 10 la materia " + s3.getNume());
+            }
             Console.WriteLine("\n");
 
             Console.WriteLine("21) Adaugam nota 11 studentului5 la Engleza");
@@ -805,33 +788,33 @@ namespace HighschoolClass
             Console.WriteLine("---------------------------------------------------");
             Console.WriteLine("\n");
 
-            //Media studentului5 la materia Math
+            /*//Media studentului5 la materia Math
             double medieE5Math;
-            medieE5Math = e5.medieNoteLaOAnumitaMaterie("Math");
-            Console.WriteLine("Matematica: " + medieE5Math);
+            medieE5Math = e5.medieNoteLaOAnumitaMaterie(s1.getNume());
+            Console.WriteLine(s1.getNume() + ": " + medieE5Math);
             Console.WriteLine("\n");
 
             //Media studentului5 la materia Physics
             double medieE5Physics;
-            medieE5Physics = e5.medieNoteLaOAnumitaMaterie("Physics");
-            Console.WriteLine("Physics: " + medieE5Physics);
+            medieE5Physics = e5.medieNoteLaOAnumitaMaterie(s2.getNume());
+            Console.WriteLine(s2.getNume() + ": " + medieE5Physics);
             Console.WriteLine("\n");
 
             //Media studentului5 la materia Biology
             double medieE5Biology;
-            medieE5Biology = e5.medieNoteLaOAnumitaMaterie("Biology");
-            Console.WriteLine("Biology: " + medieE5Biology);
+            medieE5Biology = e5.medieNoteLaOAnumitaMaterie(s3.getNume());
+            Console.WriteLine(s3.getNume() + ": " + medieE5Biology);
             Console.WriteLine("\n");
 
             //Media studentului5 la materia English (incercare)
             double medieE5English;
             try
             {
-                medieE5English = e5.medieNoteLaOAnumitaMaterie("English");
+                medieE5English = e5.medieNoteLaOAnumitaMaterie(s9.getNume());
             }
             catch(Exception ex)
             {
-                Console.WriteLine("English: " + ex.Message);
+                Console.WriteLine(s9.getNume() + ": nu exista note pentru " + e5.getName() + " la aceasta materie.");
             }
             Console.WriteLine("\n");
 
@@ -845,19 +828,40 @@ namespace HighschoolClass
             {
                 Console.WriteLine("French: " + ex.Message);
             }
-            Console.WriteLine("\n");
+            Console.WriteLine("\n");*/
 
-            //Media studentului5 la materia Music (incercare)
-            double medieE5Music;
-            try
+            double medieE5Math, medieE5Physics, medieE5Biology, medieE5English, medieE5French;
+
+            foreach (Student student in listaStudenti)
             {
-                medieE5Music = e5.medieNoteLaOAnumitaMaterie("Music");
+                try
+                {
+                    //prima materie: Math
+                    medieE5Math = student.medieNoteLaOAnumitaMaterie(s1.getNume());
+                    Console.WriteLine("Media studentului " + student.getName() + " la materia " + s1.getNume() + " este: " + medieE5Math);
+                    Console.WriteLine("\n");
+                    //a doua materie: Physics
+                    medieE5Physics = student.medieNoteLaOAnumitaMaterie(s2.getNume());
+                    Console.WriteLine("Media studentului " + student.getName() + " la materia " + s2.getNume() + " este: " + medieE5Physics);
+                    Console.WriteLine("\n");
+                    //a treia materie: Biology
+                    medieE5Biology = student.medieNoteLaOAnumitaMaterie(s3.getNume());
+                    Console.WriteLine("Media studentului " + student.getName() + " la materia " + s3.getNume() + " este: " + medieE5Biology);
+                    Console.WriteLine("\n");
+                    //a patra materie: English
+                    medieE5English = student.medieNoteLaOAnumitaMaterie(s9.getNume());
+                    Console.WriteLine("Media studentului " + student.getName() + " la materia " + s9.getNume() + " este: " + medieE5English);
+                    Console.WriteLine("\n");
+                    //a cincea materie: French
+                    medieE5French = student.medieNoteLaOAnumitaMaterie(s6.getNume());
+                    Console.WriteLine("Media studentului " + student.getName() + " la materia " + s6.getNume() + " este: " + medieE5French);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Studentul " + student.getName() + " nu are note la materia " + s9.getNume() + ", prin urmare nu i se poate calcula media.");
+                    Console.WriteLine("Studentul " + student.getName() + " nu are note la materia " + s6.getNume() + ", prin urmare nu i se poate calcula media.");
+                }
             }
-            catch(Exception ex)
-            {
-                Console.WriteLine("Music: " + ex.Message);
-            }
-            Console.WriteLine("\n");
 
             Console.WriteLine("23) Adaugam cate 2 note elevilor 2 si 3 la materia Chemistry");
             Console.WriteLine("------------------------------------------------------------");
