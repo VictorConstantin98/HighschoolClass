@@ -788,78 +788,18 @@ namespace HighschoolClass
             Console.WriteLine("---------------------------------------------------");
             Console.WriteLine("\n");
 
-            /*//Media studentului5 la materia Math
-            double medieE5Math;
-            medieE5Math = e5.medieNoteLaOAnumitaMaterie(s1.getNume());
-            Console.WriteLine(s1.getNume() + ": " + medieE5Math);
-            Console.WriteLine("\n");
+            double medieMaterii;
 
-            //Media studentului5 la materia Physics
-            double medieE5Physics;
-            medieE5Physics = e5.medieNoteLaOAnumitaMaterie(s2.getNume());
-            Console.WriteLine(s2.getNume() + ": " + medieE5Physics);
-            Console.WriteLine("\n");
-
-            //Media studentului5 la materia Biology
-            double medieE5Biology;
-            medieE5Biology = e5.medieNoteLaOAnumitaMaterie(s3.getNume());
-            Console.WriteLine(s3.getNume() + ": " + medieE5Biology);
-            Console.WriteLine("\n");
-
-            //Media studentului5 la materia English (incercare)
-            double medieE5English;
-            try
-            {
-                medieE5English = e5.medieNoteLaOAnumitaMaterie(s9.getNume());
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine(s9.getNume() + ": nu exista note pentru " + e5.getName() + " la aceasta materie.");
-            }
-            Console.WriteLine("\n");
-
-            //Media studentului5 la materia French (incercare)
-            double medieE5French;
-            try
-            {
-                medieE5French = e5.medieNoteLaOAnumitaMaterie("French");
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine("French: " + ex.Message);
-            }
-            Console.WriteLine("\n");*/
-
-            double medieE5Math, medieE5Physics, medieE5Biology, medieE5English, medieE5French;
-
-            foreach (Student student in listaStudenti)
+            foreach(SchoolSubject materie in listaMaterii)
             {
                 try
                 {
-                    //prima materie: Math
-                    medieE5Math = student.medieNoteLaOAnumitaMaterie(s1.getNume());
-                    Console.WriteLine("Media studentului " + student.getName() + " la materia " + s1.getNume() + " este: " + medieE5Math);
-                    Console.WriteLine("\n");
-                    //a doua materie: Physics
-                    medieE5Physics = student.medieNoteLaOAnumitaMaterie(s2.getNume());
-                    Console.WriteLine("Media studentului " + student.getName() + " la materia " + s2.getNume() + " este: " + medieE5Physics);
-                    Console.WriteLine("\n");
-                    //a treia materie: Biology
-                    medieE5Biology = student.medieNoteLaOAnumitaMaterie(s3.getNume());
-                    Console.WriteLine("Media studentului " + student.getName() + " la materia " + s3.getNume() + " este: " + medieE5Biology);
-                    Console.WriteLine("\n");
-                    //a patra materie: English
-                    medieE5English = student.medieNoteLaOAnumitaMaterie(s9.getNume());
-                    Console.WriteLine("Media studentului " + student.getName() + " la materia " + s9.getNume() + " este: " + medieE5English);
-                    Console.WriteLine("\n");
-                    //a cincea materie: French
-                    medieE5French = student.medieNoteLaOAnumitaMaterie(s6.getNume());
-                    Console.WriteLine("Media studentului " + student.getName() + " la materia " + s6.getNume() + " este: " + medieE5French);
+                    medieMaterii = e5.medieNoteLaOAnumitaMaterie(materie.getNume());
+                    Console.WriteLine("Studentul " + e5.getName() + " are urmatoarea medie la materia " + materie.getNume() + ": " + medieMaterii + "\n");
                 }
-                catch (Exception ex)
+                catch(Exception ex)
                 {
-                    Console.WriteLine("Studentul " + student.getName() + " nu are note la materia " + s9.getNume() + ", prin urmare nu i se poate calcula media.");
-                    Console.WriteLine("Studentul " + student.getName() + " nu are note la materia " + s6.getNume() + ", prin urmare nu i se poate calcula media.");
+                    Console.WriteLine(ex.Message + "\n");
                 }
             }
 
