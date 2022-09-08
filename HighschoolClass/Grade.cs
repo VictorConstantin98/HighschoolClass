@@ -100,8 +100,16 @@ namespace HighschoolClass
         //Implementam metoda din interfata
         public double CalculateGrade()
         {
-            double totalGrades;
-            totalGrades = gradesList.Average();
+            double totalGrades = 0;
+            try
+            {
+                totalGrades = gradesList.Average();
+                return totalGrades;
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Studentul nu are note. Nu se poate calcula o medie.");
+            }
             return totalGrades;
         } 
 

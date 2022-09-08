@@ -689,6 +689,9 @@ namespace HighschoolClass
             e2.adaugareMaterie(s4);
             e2.adaugareMaterie(s4);
 
+            e3.adaugareMaterie(s4);
+            e3.adaugareMaterie(s4);
+
             Console.WriteLine("16) Adaugam studentii intr-o lista");
             Console.WriteLine("----------------------------------");
             Console.WriteLine("\n");
@@ -807,23 +810,25 @@ namespace HighschoolClass
             Console.WriteLine("------------------------------------------------------------");
             Console.WriteLine("\n");
 
-            /*//Pentru elevul2
-            e2.adaugareNotaLaOMaterie(3, "Chemistry");
-            e2.adaugareNotaLaOMaterie(6, "Chemistry");
+            //Pentru elevul2
+            e2.adaugareNotaLaOMaterie(3, s4.getNume());
+            e2.adaugareNotaLaOMaterie(6, s4.getNume());
 
             //Pentru elevul3
-            e3.adaugareNotaLaOMaterie(10, "Chemistry");
-            e3.adaugareNotaLaOMaterie(9, "Chemistry");
-            Console.WriteLine("\n");*/
+            e3.adaugareNotaLaOMaterie(10, s4.getNume());
+            e3.adaugareNotaLaOMaterie(9, s4.getNume());
+            Console.WriteLine("\n");
 
             Console.WriteLine("24) Afisam media generala a fiecarui student");
             Console.WriteLine("--------------------------------------------");
             Console.WriteLine("\n");
 
-            //Media generala a studentului1
-            double medieGeneralaE1;
-            medieGeneralaE1 = e1.CalculateGrade();
-            Console.WriteLine("Media generala a elevului1: " + medieGeneralaE1);
+            double medieGeneralaStudenti;
+            foreach(Student student in listaStudenti)
+            {
+                medieGeneralaStudenti = student.CalculateGrade();
+                Console.WriteLine("Media generala a studentului " + student.getName() + " este: " + medieGeneralaStudenti);
+            }
 
 
 
