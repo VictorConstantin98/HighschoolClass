@@ -672,7 +672,6 @@ namespace HighschoolClass
             }
             Console.WriteLine("\n");
 
-
             Console.WriteLine("15) Adaugam materii optionale studentilor");
             Console.WriteLine("-----------------------------------------");
             Console.WriteLine("\n");
@@ -829,7 +828,51 @@ namespace HighschoolClass
                 medieGeneralaStudenti = student.CalculateGrade();
                 Console.WriteLine("Media generala a studentului " + student.getName() + " este: " + medieGeneralaStudenti);
             }
+            Console.Write("\n");
 
+            Console.WriteLine("25) Realizam evaluarea anuala pentru fiecare student");
+            Console.WriteLine("----------------------------------------------------");
+            Console.WriteLine("\n");
+
+            foreach (Student student in listaStudenti)
+            {
+                Student.YearStudentEvaluation(student);
+            }
+            Console.WriteLine("\n");
+
+            Console.WriteLine("26) Sortam studentii in lista dupa nota generala");
+            Console.WriteLine("------------------------------------------------");
+            Console.WriteLine("\n");
+
+
+            Console.WriteLine("27) Verificare metoda 'addElementsInSchoolSubjectList'");
+            Console.WriteLine("--------------------------------------------------");
+            Console.WriteLine("\n");
+
+            School school = new School();
+            school.addElementsInSchoolSubjectList(s1);
+            Console.WriteLine(school.ToString());
+            Console.WriteLine("\n");
+
+            Console.WriteLine("28) Verificam metoda 'addStudentToSchoolSubject'");
+            Console.WriteLine("--------------------------------------------");
+
+            school.addElementsInStudentList(e1);
+            Console.WriteLine(school.ToString());
+            Console.WriteLine("\n");
+
+            Console.WriteLine("29) Verificam metoda 'addStudentToSchoolSubject'");
+            Console.WriteLine("------------------------------------------------");
+            Console.WriteLine("\n");
+
+            school.addGradesToStudentsSchoolSubjects(e1.getName(), s1.getNume(), 8);
+            school.iterateInSchoolStudentsList();
+
+            Console.WriteLine("30) Verificam metoda 'studentsFinalGrade'");
+            Console.WriteLine("-----------------------------------------");
+            Console.WriteLine("\n");
+
+            
 
 
 
